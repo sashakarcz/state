@@ -4,7 +4,7 @@ from datetime import datetime
 import re
 import os
 
-# Load the monitor.yml file
+# Load the .upptimerc.yml file
 with open('monitor.yml', 'r') as file:
     config = yaml.safe_load(file)
 
@@ -89,6 +89,9 @@ for entry in config['sites']:
 
         # Run the DNS check
         result = run_dns_check(domain, expected_record, record_type, url)
+        readme_file.seek(0)
+        results.append(result)
+        readme_file.truncate()
 
 # Write the results to a YAML file
 with open('history/dns_results.yml', 'w') as outfile:
