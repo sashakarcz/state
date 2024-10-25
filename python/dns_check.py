@@ -104,7 +104,6 @@ for res in results:
 
 # Update README.md in the Live DNS Status section
 with open('README.md', 'w') as readme_file:
-    readme_content = readme_file.read()
     # Insert new DNS status table
     readme_file.write(f"\n### DNS Check on {datetime.utcnow().isoformat()}\n\n")
     results.write(dns_results_md)
