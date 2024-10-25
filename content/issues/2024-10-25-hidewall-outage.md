@@ -1,5 +1,5 @@
 ---
-title: US East Connection Issues
+title: Hidewall Connection Issues in Linode
 date: 2024-19-25 04:13:00
 resolved: false
 resolvedWhen: 2018-04-25 04:13:59
