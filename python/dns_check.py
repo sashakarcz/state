@@ -4,7 +4,7 @@ from datetime import datetime
 import os
 
 # Load the .upptimerc.yml file
-with open('monitor.yml', 'r') as file:
+with open('config.yml', 'r') as file:
     config = yaml.safe_load(file)
 
 # Initialize the results array
