@@ -169,14 +169,16 @@ params:
       - 104.21.32.197
       - 172.67.154.114
     record_type: A
+    expected_status: [200, 301, 302, 403]
 
   - name: example.com
-    category: Failed
+    category: Working
     link: http://example.com
     domain: example.com
     expected_record:
-      - 93.184.215.15
+      - 93.184.215.14
     record_type: A
+    expected_status: [200, 301, 302]
 
   - name: test.com
     category: Failed
