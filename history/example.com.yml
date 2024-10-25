@@ -1,12 +1,11 @@
-actualStatus: 200
 code: 1
-expectedStatuses:
-- 200
-- 301
-- 302
-generator: HTTP Checker
-lastUpdated: '2024-10-25T18:52:12.290972'
-responseTime: 0.008966
-startTime: '2024-10-25T18:52:12.098225'
+expected:
+- 93.184.215.14
+generator: DNS Checker
+lastUpdated: '2024-10-25T19:01:26.700240'
+responseTime: 0
+result:
+- 93.184.215.14
+startTime: '2024-10-25T19:01:26.473055'
 status: up
 url: http://example.com

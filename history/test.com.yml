@@ -1,10 +1,12 @@
-actualStatus: 403
 code: 0
-expectedStatuses:
-- 200
-generator: HTTP Checker
-lastUpdated: '2024-10-25T18:34:51.175346'
-responseTime: 0.03618
-startTime: '2024-10-25T18:34:47.700685'
+expected:
+- 192.0.2.1
+generator: DNS Checker
+lastUpdated: '2024-10-25T19:01:26.946719'
+responseTime: 0
+result:
+- 3.18.255.247
+- 34.224.149.186
+startTime: '2024-10-25T19:01:26.473055'
 status: down
 url: http://test.com
