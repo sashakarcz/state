@@ -83,7 +83,7 @@ def run_dns_check(domain, expected_record, record_type, url=None):
         return None
 
 # Iterate over entries in the systems section and filter DNS checks
-for entry in config['systems']:
+for entry in config['params']['systems']:
     if 'domain' in entry:  # Check for DNS-specific keys
         domain = entry['domain']
         expected_record = entry.get('expected_record', [])
