@@ -89,9 +89,6 @@ for entry in config['sites']:
 
         # Run the DNS check
         result = run_dns_check(domain, expected_record, record_type, url)
-        readme_file.seek(0)
-        results.append(result)
-        readme_file.truncate()
 
 # Write the results to a YAML file
 with open('history/dns_results.yml', 'w') as outfile:
@@ -106,11 +103,11 @@ for res in results:
     dns_results_md += f"| {res['domain']} | {res['status']} | {', '.join(res['expected'])} | {', '.join(res['actual'])} | {res['timestamp']} |\n"
 
 # Update README.md in the Live DNS Status section
-with open('README.md', 'r+') as readme_file:
+with open('README.md', 'w') as readme_file:
     readme_content = readme_file.read()
     # Insert new DNS status table
     readme_file.write(f"\n### DNS Check on {datetime.utcnow().isoformat()}\n\n")
-    readme_file.write(dns_results_md)
+    results.write(dns_results_md)
 
 # Write current results to dns_status.md
 with open('history/dns_status.md', 'w') as status_file:
