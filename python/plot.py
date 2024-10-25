@@ -1,7 +1,6 @@
 import yaml
 import plotly.graph_objects as go
 import os
-import subprocess
 from datetime import datetime
 import zoneinfo
 
@@ -47,11 +46,20 @@ for system in config['params']['systems']:
 
     # Create directory if it doesn't exist
     os.makedirs('content/issues', exist_ok=True)
+    os.makedirs('layouts/partials/custom', exist_ok=True)
+
+    # Create partial HTML file
+    partial_file = f'layouts/partials/custom/{name}-http.html'
+    with open(partial_file, 'w') as file:
+        file.write(f"""<div>
+  {{ partial "graph" . }}
+</div>
+""")
 
     # Save graph as HTML file
-    fig.write_html(f'layouts/partials/custom/{name}-http.html')
+    fig.write_html(f'content/issues/{name}-http.html')
 
-    # Add link to graph in markdown file
+    # Update date field in markdown file
     date_str = timestamps[-1][:10]  # Get date from latest timestamp
     markdown_file = f'content/issues/{date_str}-{name}-http.md'
     try:
@@ -61,8 +69,7 @@ for system in config['params']['systems']:
         print(f"No markdown file found for {name}. Skipping...")
         continue
 
-    # Update date field
-    updated_date = datetime.now(utc).isoformat()
+    updated_date = datetime.now(utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     lines = markdown_content.splitlines()
     for i, line in enumerate(lines):
         if line.startswith('date:'):
@@ -71,6 +78,11 @@ for system in config['params']['systems']:
     else:
         lines.insert(1, f'date: {updated_date}')
     markdown_content = '\n'.join(lines)
+
+    # Add link to graph if it doesn't exist
+    link = f'[Up/Down State History Graph]({name}-http.html)'
+    if link not in markdown_content:
+        markdown_content += f'\n\n{link}'
 
     # Write updated markdown content
     with open(markdown_file, 'w') as file:
