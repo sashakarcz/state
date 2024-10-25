@@ -143,9 +143,9 @@ params:
   # For help, see the wiki:
   # https://github.com/cstate/cstate/wiki/Customization
   categories:
-    - name: North Coast
-      description: The main servers are located here.
-      closed: true
+    - name: Hidewall
+      description: Hidewall server status.
+      closed: false
     - name: Empty Category
     - name: Uncategorized
       untitled: true
@@ -158,8 +158,9 @@ params:
   # For help, see the wiki:
   # https://github.com/cstate/cstate/wiki/Customization
   systems:
-    - name: Gateway
-      category: North Coast
+    - name: Web UI
+      category: Hidewall
+      link: https://hidewall.io
     - name: Backup Gateway
       category: North Coast
     - name: Website
