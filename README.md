@@ -27,6 +27,7 @@ params:
 | expected_record | A list of expected IP addresses (or other DNS records) that this domain should resolve to. |
 | record_type (optional) | The type of DNS record to check, such as A, CNAME, or MX. Defaults to A if not specified. |
 | link (optional) | A URL for additional information about this system. |
+| expected_status (optional) | A list of http status codes that are acceptable for determining that the site is operational. |
 
 
 Example Configuration: Here’s an example of adding a new system named “Media Proxy”:
