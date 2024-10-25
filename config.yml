@@ -146,9 +146,12 @@ params:
     - name: Hidewall
       description: Hidewall server status.
       closed: false
-    - name: Empty Category
-    - name: Uncategorized
-      untitled: true
+    - name: Failed
+      description: Failed systems on purpose
+      closed: false
+    - name: Working
+      description: Working systems on purpose
+      closed: false
 
   # These are your systems. Change them to
   # change the amount of components.
@@ -167,21 +170,29 @@ params:
       - 172.67.154.114
     record_type: A
 
-  - name: Backup Gateway
-    category: North Coast
+  - name: example.com
+    category: Failed
+    link: http://example.com
+    domain: example.com
+    expected_record:
+      - 93.184.215.15
+    record_type: A
 
-  - name: Website
-    description: The web frontend for the application.
-    category: Uncategorized
-    link: https://example.com/
+  - name: test.com
+    category: Failed
+    link: http://test.com
+    domain: test.com
+    expected_record:
+      - 192.0.2.1
+    record_type: A
 
-  - name: API
-    description: The guts of the application.
-    category: Uncategorized
-
-  - name: Media Proxy
-    description: This is the service responsible for serving images, audio, and video. It is reliant on our CDN.
-    category: Uncategorized
+  - name: mail.example.com
+    category: Failed
+    link: http://mail.example.com
+    domain: mail.example.com
+    expected_record:
+      - mail.example.net
+    record_type: CNAME
   # What date format to use?
   #
   # Hugo formatting docs:
