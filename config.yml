@@ -161,7 +161,7 @@ params:
     - name: Web UI
       category: Hidewall
       link: https://hidewall.io
-      partial: custom/metrics
+      partial: custom/hidewall.html
     - name: Backup Gateway
       category: North Coast
     - name: Website
