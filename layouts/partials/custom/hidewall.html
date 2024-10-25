@@ -15,7 +15,7 @@
     }
 
     .status-bar {
-      max-width: 400px;
+      max-width: 600px;
       padding: 20px;
       border: 1px solid #ddd;
       border-radius: 8px;
@@ -34,15 +34,19 @@
     .status.critical { background-color: #f8d7da; color: #721c24; }
 
     .history-list {
-      list-style-type: none;
+      display: flex;
+      gap: 10px; /* Space between items */
       padding: 0;
       margin: 10px 0 0;
+      list-style-type: none;
+      overflow-x: auto; /* Allows horizontal scrolling if needed */
     }
 
     .history-list li {
-      margin-bottom: 8px;
       padding: 8px;
       border-radius: 5px;
+      white-space: nowrap; /* Prevents text wrapping */
+      display: inline-flex; /* Keeps items inline */
     }
   </style>
 </head>
