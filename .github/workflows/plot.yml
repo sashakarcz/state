@@ -28,7 +28,7 @@ jobs:
       # Run Python script
       - name: Run Plotting Python Script
         run: |
-          python3 python/Pplot.py
+          python3 python/plot.py
 
       - name: Track Changes
         run: |
