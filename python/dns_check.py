@@ -4,8 +4,8 @@ from datetime import datetime
 import re
 import os
 
-# Load the .upptimerc.yml file
-with open('.upptimerc.yml', 'r') as file:
+# Load the monitor.yml file
+with open('monitor.yml', 'r') as file:
     config = yaml.safe_load(file)
 
 # Initialize the results array
