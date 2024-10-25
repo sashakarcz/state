@@ -46,14 +46,14 @@ for system in config['params']['systems']:
     )
 
     # Create directory if it doesn't exist
-    os.makedirs('state/content/issues', exist_ok=True)
+    os.makedirs('content/issues', exist_ok=True)
 
     # Save graph as HTML file
-    fig.write_html(f'state/content/issues/{name}-http.html')
+    fig.write_html(f'content/issues/{name}-http.html')
 
     # Add link to graph in markdown file
     date_str = timestamps[-1][:10]  # Get date from latest timestamp
-    markdown_file = f'state/content/issues/{date_str}-{name}-http.md'
+    markdown_file = f'content/issues/{date_str}-{name}-http.md'
     try:
         with open(markdown_file, 'r') as file:
             markdown_content = file.read()
@@ -70,7 +70,3 @@ for system in config['params']['systems']:
     with open(markdown_file, 'w') as file:
         file.write(markdown_content)
 
-# Create Git commit
-commit_message = f"Update state and graphs at {datetime.now(utc).isoformat()}"
-subprocess.run(["git", "add", "."])
-subprocess.run(["git", "commit", "-m", commit_message])
