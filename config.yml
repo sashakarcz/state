@@ -158,7 +158,7 @@ params:
   # For help, see the wiki:
   # https://github.com/cstate/cstate/wiki/Customization
   systems:
-    - name: Web UI
+    - name: hidewall.io
       category: Hidewall
       link: https://hidewall.io
     - name: Backup Gateway
