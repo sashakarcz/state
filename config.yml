@@ -170,6 +170,7 @@ params:
       - 172.67.154.114
     record_type: A
     expected_status: [200, 301, 302, 403]
+    partials: layouts/partials/custom/hidewall.io-http.html
 
   - name: example.com
     category: Working
@@ -179,6 +180,8 @@ params:
       - 93.184.215.14
     record_type: A
     expected_status: [200, 301, 302]
+    partials: layouts/partials/custom/example.com-http.html
+
 
   - name: test.com
     category: Failed
@@ -187,6 +190,8 @@ params:
     expected_record:
       - 192.0.2.1
     record_type: A
+    partials: layouts/partials/custom/test.com-http.html
+
 
   - name: mail.example.com
     category: Failed
@@ -195,6 +200,8 @@ params:
     expected_record:
       - mail.example.net
     record_type: CNAME
+    partials: layouts/partials/custom/mail.example.com-http.html
+
   # What date format to use?
   #
   # Hugo formatting docs:
