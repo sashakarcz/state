@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: '*/5 * * * *'  # Check every 5 minutes
   repository_dispatch:
-    types: [dhttp_check]
+    types: [http_check]
   workflow_dispatch:
 
 jobs:
@@ -23,14 +23,14 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pyyaml
+          pip install pyyaml requests
 
-      # Run Python DNS check script
-      - name: Run DNS Check Python Script
+      # Run Python http check script
+      - name: Run http Check Python Script
         run: |
           python3 python/http_check.py
 
-      # Stash untracked/modified files, including DNS results
+      # Stash untracked/modified files, including http results
       - name: Track Changes
         run: |
           git add .
