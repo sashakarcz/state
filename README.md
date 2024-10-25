@@ -44,7 +44,8 @@ params:
 ```
 This configuration sets up a DNS check for `mediaproxy.example.com`, expecting it to resolve to IP addresses `203.0.113.5` and `203.0.113.6`.
 
-!!! Important Notes
+[!TIP]
+Important Notes
 
 Case Sensitivity: Ensure the category names and other fields match exactly if referenced elsewhere.
 
