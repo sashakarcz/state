@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pyyaml
+          pip install pyyaml plotly
 
       # Run Python script
       - name: Run Plotting Python Script
