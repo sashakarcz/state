@@ -1,5 +1,5 @@
 # Adding New Systems to Status Dashboard
-## To add a new system for DNS monitoring, follow these steps:
+## To add a new system for reporting, follow these steps:
 
 1. Open config.yml: In your project root, locate and open the config.yml file where the monitoring configuration is defined.
 
