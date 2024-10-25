@@ -14,7 +14,7 @@ start_time = datetime.utcnow().isoformat()
 def update_issue_markdown(name, url, expected_statuses, actual_status, status):
     # Define filename for the markdown file in content/issues/
     date_str = datetime.utcnow().strftime("%Y-%m-%d")
-    file_path = f"content/issues/{date_str}-{name}-http.md"
+    file_path = f"content/issues/{date_str}-{name}.md"
     is_resolved = (status == "up")
     
     # Content of the markdown file
@@ -41,8 +41,8 @@ section: issue
 def run_http_check(name, url, expected_statuses):
     print(f"Running HTTP check for {name} (URL: {url}, Expected: {expected_statuses})")
     try:
-        # Send HTTP request and get status code
-        response = requests.get(url)
+        # Send HTTP request with a 5-second timeout
+        response = requests.get(url, timeout=5)
         actual_status = response.status_code
 
         # Determine if the HTTP check passed or failed
@@ -50,37 +50,42 @@ def run_http_check(name, url, expected_statuses):
         
         # Update or create markdown file for the issue
         update_issue_markdown(name, url, expected_statuses, actual_status, status)
-        
+
         # Save individual domain result to its respective YAML file
         os.makedirs('history', exist_ok=True)
         with open(f'history/{name}.yml', 'w') as domain_file:
             yaml.dump({
                 "url": url,
                 "status": status,
-                "code": 1 if status == "up" else 0,
+                "code": actual_status,
                 "responseTime": response.elapsed.total_seconds(),
                 "lastUpdated": datetime.utcnow().isoformat(),
                 "startTime": start_time,
-                "actualStatus": actual_status,
-                "expectedStatuses": expected_statuses,
+                "result": actual_status,
+                "expected": expected_statuses,
                 "generator": "HTTP Checker"
             }, domain_file, default_flow_style=False)
 
-    except requests.RequestException as e:
-        print(f"Error during HTTP check for {name}: {str(e)}")
-        # Handle errors and create markdown file with error details
-        update_issue_markdown(name, url, expected_statuses, "Error", "down")
+        return {
+            "name": name,
+            "actual": actual_status,
+            "expected": expected_statuses,
+            "timestamp": datetime.utcnow().isoformat(),
+            "status": status.capitalize()
+        }
 
-# Iterate over entries in the systems section and filter HTTP checks
+    except requests.exceptions.Timeout:
+        print(f"HTTP check for {name} timed out.")
+        # Log timeout as an error in the markdown file
+        update_issue_markdown(name, url, expected_statuses, "Timeout", "down")
+        return None
+
+# Iterate over entries in the systems section and filter for HTTP checks
 for entry in config['params']['systems']:
-    if 'link' in entry:  # Check for HTTP-specific keys
+    if entry.get('http', False):  # Check for http: true
         name = entry['name']
-        url = entry['link']
-        expected_statuses = entry.get('expected_status', [200])  # Default to [200] if unspecified
-
-        # Ensure expected_statuses is a list
-        if not isinstance(expected_statuses, list):
-            expected_statuses = [expected_statuses]
+        url = entry.get("link", None)
+        expected_statuses = entry.get('expected_status', [200])  # Default to status 200 if unspecified
 
         # Run the HTTP check
         run_http_check(name, url, expected_statuses)
