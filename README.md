@@ -44,7 +44,7 @@ params:
       link: https://mediaproxy.example.com
       expected_status: [200, 301, 302]
 ```
-This configuration sets up a DNS check for `mediaproxy.example.com`, expecting it to resolve to IP addresses `203.0.113.5` and `203.0.113.6`.
+This configuration sets up checks for `mediaproxy.example.com`, expecting it to resolve to IP addresses `203.0.113.5` and `203.0.113.6`, and marks it as up for http statuses `[200, 301, 302]`.
 
 > [!TIP]
 > Important Notes
