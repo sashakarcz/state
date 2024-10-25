@@ -6,14 +6,14 @@
   - 104.21.32.197
   - 172.67.154.114
   status: Up
-  timestamp: '2024-10-25T17:01:42.175224'
+  timestamp: '2024-10-25T17:12:33.352381'
 - actual:
   - 93.184.215.14
   domain: example.com
   expected:
   - 93.184.215.14
   status: Up
-  timestamp: '2024-10-25T17:01:42.187440'
+  timestamp: '2024-10-25T17:12:33.374823'
 - actual:
   - 3.18.255.247
   - 34.224.149.186
@@ -21,11 +21,11 @@
   expected:
   - 192.0.2.1
   status: Down
-  timestamp: '2024-10-25T17:01:42.209490'
+  timestamp: '2024-10-25T17:12:33.434628'
 - actual:
   - No record found
   domain: mail.example.com
   expected:
   - mail.example.net
   status: Down
-  timestamp: '2024-10-25T17:01:42.253011'
+  timestamp: '2024-10-25T17:12:33.497939'
