@@ -1,0 +1,46 @@
+name: DNS CI
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Check every 5 minutes
+  repository_dispatch:
+    types: [dhttp_check]
+  workflow_dispatch:
+
+jobs:
+  dns_check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Install Python and dependencies
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install pyyaml
+
+      # Run Python DNS check script
+      - name: Run DNS Check Python Script
+        run: |
+          python3 python/http_check.py
+
+      # Stash untracked/modified files, including DNS results
+      - name: Track Changes
+        run: |
+          git add .
+
+      # Commit and push the DNS results to the gh-pages branch
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git commit -m "Update DNS Monitoring Results"
+          git push origin master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
