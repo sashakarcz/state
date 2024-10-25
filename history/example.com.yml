@@ -1,11 +1,11 @@
-code: 1
+code: 0
 expected:
-- 93.184.215.14
+- 93.184.215.15
 generator: DNS Checker
-lastUpdated: '2024-10-25T17:24:42.635558'
+lastUpdated: '2024-10-25T18:02:15.408194'
 responseTime: 0
 result:
 - 93.184.215.14
-startTime: '2024-10-25T17:24:42.262921'
-status: up
+startTime: '2024-10-25T18:02:15.229125'
+status: down
 url: http://example.com
