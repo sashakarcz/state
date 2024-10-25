@@ -1,0 +1,11 @@
+history:
+- actualStatus: 200
+  responseTime: 0.028245
+  status: up
+  timestamp: '2024-10-25T21:09:43.191461+00:00'
+  type: http
+resolved: true
+resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
+resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
+status: up
+url: http://example.com
