@@ -72,3 +72,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages  # This deploys to the `gh-pages` branch
+        publish_dir: ./public  # The output directory for your built site
