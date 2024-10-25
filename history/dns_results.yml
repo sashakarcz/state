@@ -1,31 +1,31 @@
 - actual:
-  - 104.21.32.197
   - 172.67.154.114
+  - 104.21.32.197
   domain: hidewall.io
   expected:
   - 104.21.32.197
   - 172.67.154.114
   status: Up
-  timestamp: '2024-10-25T17:12:33.352381'
+  timestamp: '2024-10-25T17:24:42.613038'
 - actual:
   - 93.184.215.14
   domain: example.com
   expected:
   - 93.184.215.14
   status: Up
-  timestamp: '2024-10-25T17:12:33.374823'
+  timestamp: '2024-10-25T17:24:42.635558'
 - actual:
-  - 3.18.255.247
   - 34.224.149.186
+  - 3.18.255.247
   domain: test.com
   expected:
   - 192.0.2.1
   status: Down
-  timestamp: '2024-10-25T17:12:33.434628'
+  timestamp: '2024-10-25T17:24:42.684473'
 - actual:
   - No record found
   domain: mail.example.com
   expected:
   - mail.example.net
   status: Down
-  timestamp: '2024-10-25T17:12:33.497939'
+  timestamp: '2024-10-25T17:24:42.751161'
