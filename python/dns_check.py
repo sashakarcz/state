@@ -82,8 +82,8 @@ def run_dns_check(domain, expected_record, record_type, url=None):
         update_issue_markdown(domain, expected_record, ["Error"], "down")
         return None
 
-# Iterate over entries in the sites section and filter DNS checks
-for entry in config['sites']:
+# Iterate over entries in the systems section and filter DNS checks
+for entry in config['systems']:
     if 'domain' in entry:  # Check for DNS-specific keys
         domain = entry['domain']
         expected_record = entry.get('expected_record', [])
