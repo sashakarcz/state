@@ -46,5 +46,7 @@ This configuration sets up a DNS check for `mediaproxy.example.com`, expecting i
 
 > [!TIP]
 > Important Notes
+> 
 > Case Sensitivity: Ensure the category names and other fields match exactly if referenced elsewhere.
+> 
 > YAML Formatting: Maintain consistent YAML indentation and format to avoid parsing errors.
