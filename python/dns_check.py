@@ -14,7 +14,7 @@ start_time = datetime.utcnow().isoformat()  # Start time for all checks
 def update_issue_markdown(domain, expected_record, actual_record, status):
     # Set filename for the markdown file in content/issues/
     date_str = datetime.utcnow().strftime("%Y-%m-%d")
-    file_path = f"content/issues/{date_str}-{domain}.md"
+    file_path = f"content/issues/{date_str}-{domain}-dns.md"
     is_resolved = (status == "up")
     
     # Set content of the markdown file
