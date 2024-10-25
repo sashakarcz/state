@@ -18,7 +18,8 @@ params:
 
 1. Add a New System: Each system requires several fields to define what the DNS checker will monitor. Add a new entry under systems with the following details:
 
-
+| Variable | Description |
+|----------|-------------|
 | name | A unique identifier for this system, which will be displayed in status reports. |
 | category | The category this system belongs to. Categories help organize systems by groups, such as "Backend" or "User-Facing Services." Categories are case-sensitive and must match exactly if used in multiple entries. |
 |domain | The domain name to monitor for DNS correctness. |
