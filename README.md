@@ -1,11 +1,48 @@
+# Adding New Systems to Status Dashboard
+## To add a new system for DNS monitoring, follow these steps:
 
-### DNS Check on 2024-10-25T17:24:42.753204
+1. Open config.yml: In your project root, locate and open the config.yml file where the monitoring configuration is defined.
 
-## Live DNS Status
+1 .Locate the Systems Section: The systems configuration is nested under params. Find the systems list within params, which looks like this:
 
-| Domain           | Status     | Expected         | Actual           | Timestamp              |
-|------------------|------------|------------------|------------------|------------------------|
-| hidewall.io | Up | 104.21.32.197, 172.67.154.114 | 172.67.154.114, 104.21.32.197 | 2024-10-25T17:24:42.613038 |
-| example.com | Up | 93.184.215.14 | 93.184.215.14 | 2024-10-25T17:24:42.635558 |
-| test.com | Down | 192.0.2.1 | 34.224.149.186, 3.18.255.247 | 2024-10-25T17:24:42.684473 |
-| mail.example.com | Down | mail.example.net | No record found | 2024-10-25T17:24:42.751161 |
+```yaml
+params:
+  systems:
+    - name: Example System
+      category: Uncategorized
+      domain: example.com
+      expected_record:
+        - 192.0.2.1
+      record_type: A
+```
+
+1. Add a New System: Each system requires several fields to define what the DNS checker will monitor. Add a new entry under systems with the following details:
+
+```
+name: A unique identifier for this system, which will be displayed in status reports.
+category: The category this system belongs to. Categories help organize systems by groups, such as "Backend" or "User-Facing Services." Categories are case-sensitive and must match exactly if used in multiple entries.
+domain: The domain name to monitor for DNS correctness.
+expected_record: A list of expected IP addresses (or other DNS records) that this domain should resolve to.
+record_type (optional): The type of DNS record to check, such as A, CNAME, or MX. Defaults to A if not specified.
+link (optional): A URL for additional information about this system.
+```
+
+Example Configuration: Here’s an example of adding a new system named “Media Proxy”:
+
+```yaml
+params:
+  systems:
+    - name: Media Proxy
+      category: CDN
+      domain: mediaproxy.example.com
+      expected_record:
+        - 203.0.113.5
+        - 203.0.113.6
+      record_type: A
+      link: https://mediaproxy.example.com
+```
+This configuration sets up a DNS check for `mediaproxy.example.com`, expecting it to resolve to IP addresses `203.0.113.5` and `203.0.113.6`.
+
+Important Notes
+Case Sensitivity: Ensure the category names and other fields match exactly if referenced elsewhere.
+YAML Formatting: Maintain consistent YAML indentation and format to avoid parsing errors.
