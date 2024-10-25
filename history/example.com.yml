@@ -2,10 +2,10 @@ code: 0
 expected:
 - 93.184.215.145
 generator: DNS Checker
-lastUpdated: '2024-10-25T19:12:32.613101'
+lastUpdated: '2024-10-25T19:21:43.783360'
 responseTime: 0
 result:
 - 93.184.215.14
-startTime: '2024-10-25T19:12:32.390887'
+startTime: '2024-10-25T19:21:43.506454'
 status: down
 url: http://example.com
