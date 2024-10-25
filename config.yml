@@ -161,6 +161,11 @@ params:
     - name: hidewall.io
       category: Hidewall
       link: https://hidewall.io
+      domain: hidewall.io
+      expected_record:
+        - 104.21.32.197
+        - 172.67.154.114 
+    record_type: A
     - name: Backup Gateway
       category: North Coast
     - name: Website
