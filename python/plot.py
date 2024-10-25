@@ -3,7 +3,6 @@ import plotly.graph_objects as go
 import os
 from datetime import datetime, timezone
 import zoneinfo
-import re
 
 # Load config.yml
 with open('config.yml', 'r') as file:
@@ -12,24 +11,20 @@ with open('config.yml', 'r') as file:
 # Initialize UTC timezone
 utc = zoneinfo.ZoneInfo('UTC')
 
-# Define a regex pattern for ISO 8601 date validation
-iso8601_pattern = re.compile(
-    r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z$'
-)
-
-# Helper function to ensure date is in ISO 8601 format
-def validate_or_set_date(lines):
+# Function to add or update the date field in markdown files
+def add_or_update_date(lines):
+    # Check if the date field is present; update or insert it
+    found_date = False
     for i, line in enumerate(lines):
-        if line.startswith('date:'):
-            date_value = line.split('date: ')[1].strip()
-            if not iso8601_pattern.match(date_value):  # Check if it's a valid ISO 8601 date
-                # If not, replace it with the current UTC time
-                lines[i] = f'date: {datetime.now(timezone.utc).isoformat()}'
-            return
-    # If date is missing, add it after the first line
-    lines.insert(1, f'date: {datetime.now(timezone.utc).isoformat()}')
+        if line.startswith("date:"):
+            found_date = True
+            lines[i] = f"date: {datetime.now(utc).isoformat()}"
+    if not found_date:
+        # Insert date after the front matter start
+        lines.insert(1, f"date: {datetime.now(utc).isoformat()}")
+    return lines
 
-# Iterate over systems
+# Iterate over systems in config
 for system in config['params']['systems']:
     name = system['name']
     domain = system.get('domain', name)
@@ -54,7 +49,7 @@ for system in config['params']['systems']:
         mode='lines+markers'
     )])
 
-    # Customize graph
+    # Customize graph layout
     fig.update_layout(
         title=f'Up/Down State History for {name}',
         xaxis_title='Time (UTC)',
@@ -66,7 +61,7 @@ for system in config['params']['systems']:
     os.makedirs('content/issues', exist_ok=True)
     os.makedirs('layouts/partials/custom', exist_ok=True)
 
-    # Create partial HTML file for linking
+    # Create partial HTML file for linking the graph
     partial_file = f'layouts/partials/custom/{name}-http.html'
     with open(partial_file, 'w') as file:
         file.write(f"""<div>
@@ -77,30 +72,28 @@ for system in config['params']['systems']:
     # Save graph as HTML file
     fig.write_html(f'content/issues/{name}-http.html')
 
-    # Update date field in markdown file
-    date_str = timestamps[-1][:10]  # Get date from latest timestamp
+    # Update or create the markdown file with date
+    date_str = timestamps[-1][:10]  # Extract date from latest timestamp
     markdown_file = f'content/issues/{date_str}-{name}-http.md'
     try:
         with open(markdown_file, 'r') as file:
-            markdown_content = file.read()
+            markdown_content = file.read().splitlines()
     except FileNotFoundError:
-        print(f"No markdown file found for {name}. Skipping...")
-        continue
+        # Initialize empty front matter if file not found
+        markdown_content = ["---", "---"]
 
-    lines = markdown_content.splitlines()
-    
-    # Validate or set the date field
-    validate_or_set_date(lines)
-    
-    markdown_content = '\n'.join(lines)
+    # Ensure the date is correctly set
+    markdown_content = add_or_update_date(markdown_content)
 
-    # Add link to graph if it doesn't exist
+    # Add link to the graph if it's not already in the markdown content
     link = f'[Up/Down State History Graph]({name}-http.html)'
     if link not in markdown_content:
-        markdown_content += f'\n\n{link}'
+        markdown_content.append(f'\n\n{link}')
 
-    # Write updated markdown content
+    # Write updated content back to markdown file
     with open(markdown_file, 'w') as file:
-        file.write(markdown_content)
+        file.write("\n".join(markdown_content))
 
-print("Script executed successfully. Markdown files and graphs updated.")
+    print(f"Updated markdown for {name}.")
+
+print("Script executed successfully.")
