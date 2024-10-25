@@ -1,29 +1,45 @@
-name: Create Graphs
+name: Plots
 
 on:
   schedule:
-    - cron:  */5 * * * *
+    - cron: '*/5 * * * *'  # Check every 7 minutes
+  repository_dispatch:
+    types: [make_plots]
+  workflow_dispatch:
 
 jobs:
-  make-graphs:
+  graphing:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Install Python and dependencies
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install plotly pyyaml
+          pip install pyyaml
 
-      - name: Run checks
+      # Run Python script
+      - name: Run Plotting Python Script
         run: |
-          python python/plot.py
+          python3 python/Pplot.py
 
-      - name: Commit changes
+      - name: Track Changes
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
           git add .
-          git commit -m "Automated commit from GitHub Actions"
-          git push
+
+      # Commit and push the results
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git commit -m "Update DNS Monitoring Results"
+          git push origin master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
