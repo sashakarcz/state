@@ -44,9 +44,7 @@ params:
 ```
 This configuration sets up a DNS check for `mediaproxy.example.com`, expecting it to resolve to IP addresses `203.0.113.5` and `203.0.113.6`.
 
-[!TIP]
-Important Notes
-
-Case Sensitivity: Ensure the category names and other fields match exactly if referenced elsewhere.
-
-YAML Formatting: Maintain consistent YAML indentation and format to avoid parsing errors.
+> [!TIP]
+> Important Notes
+> Case Sensitivity: Ensure the category names and other fields match exactly if referenced elsewhere.
+> YAML Formatting: Maintain consistent YAML indentation and format to avoid parsing errors.
