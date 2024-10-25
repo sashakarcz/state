@@ -50,42 +50,37 @@ def run_http_check(name, url, expected_statuses):
         
         # Update or create markdown file for the issue
         update_issue_markdown(name, url, expected_statuses, actual_status, status)
-
+        
         # Save individual domain result to its respective YAML file
         os.makedirs('history', exist_ok=True)
         with open(f'history/{name}.yml', 'w') as domain_file:
             yaml.dump({
                 "url": url,
                 "status": status,
-                "code": actual_status,
+                "code": 1 if status == "up" else 0,
                 "responseTime": response.elapsed.total_seconds(),
                 "lastUpdated": datetime.utcnow().isoformat(),
                 "startTime": start_time,
-                "result": actual_status,
-                "expected": expected_statuses,
+                "actualStatus": actual_status,
+                "expectedStatuses": expected_statuses,
                 "generator": "HTTP Checker"
             }, domain_file, default_flow_style=False)
 
-        return {
-            "name": name,
-            "actual": actual_status,
-            "expected": expected_statuses,
-            "timestamp": datetime.utcnow().isoformat(),
-            "status": status.capitalize()
-        }
+    except requests.RequestException as e:
+        print(f"Error during HTTP check for {name}: {str(e)}")
+        # Handle errors and create markdown file with error details
+        update_issue_markdown(name, url, expected_statuses, "Error", "down")
 
-    except requests.exceptions.Timeout:
-        print(f"HTTP check for {name} timed out.")
-        # Log timeout as an error in the markdown file
-        update_issue_markdown(name, url, expected_statuses, "Timeout", "down")
-        return None
-
-# Iterate over entries in the systems section and filter for HTTP checks
+# Iterate over entries in the systems section and filter HTTP checks
 for entry in config['params']['systems']:
-    if entry.get('http', False):  # Check for http: true
+    if 'link' in entry:  # Check for HTTP-specific keys
         name = entry['name']
-        url = entry.get("link", None)
-        expected_statuses = entry.get('expected_status', [200])  # Default to status 200 if unspecified
+        url = entry['link']
+        expected_statuses = entry.get('expected_status', [200])  # Default to [200] if unspecified
+
+        # Ensure expected_statuses is a list
+        if not isinstance(expected_statuses, list):
+            expected_statuses = [expected_statuses]
 
         # Run the HTTP check
         run_http_check(name, url, expected_statuses)
