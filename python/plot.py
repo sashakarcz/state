@@ -87,3 +87,5 @@ for system in config['params']['systems']:
     # Write updated markdown content
     with open(markdown_file, 'w') as file:
         file.write(markdown_content)
+
+print("Script completed. Graphs and markdown files updated.")
