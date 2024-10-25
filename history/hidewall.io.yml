@@ -3,11 +3,11 @@ expected:
 - 104.21.32.197
 - 172.67.154.114
 generator: DNS Checker
-lastUpdated: '2024-10-25T19:11:48.888642'
+lastUpdated: '2024-10-25T19:12:32.585203'
 responseTime: 0
 result:
-- 172.67.154.114
 - 104.21.32.197
-startTime: '2024-10-25T19:11:48.748912'
+- 172.67.154.114
+startTime: '2024-10-25T19:12:32.390887'
 status: up
 url: http://hidewall.io
