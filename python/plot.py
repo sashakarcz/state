@@ -1,7 +1,7 @@
 import yaml
 import plotly.graph_objects as go
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 import zoneinfo
 
 # Load config.yml
@@ -39,16 +39,16 @@ for system in config['params']['systems']:
     # Customize graph
     fig.update_layout(
         title=f'Up/Down State History for {name}',
-        xaxis_title='Time',
+        xaxis_title='Time (UTC)',
         yaxis_title='State',
         yaxis=dict(range=[0, 1.1])
     )
 
-    # Create directory if it doesn't exist
+    # Create directories if they don't exist
     os.makedirs('content/issues', exist_ok=True)
     os.makedirs('layouts/partials/custom', exist_ok=True)
 
-    # Create partial HTML file
+    # Create partial HTML file for linking
     partial_file = f'layouts/partials/custom/{name}-http.html'
     with open(partial_file, 'w') as file:
         file.write(f"""<div>
@@ -69,7 +69,7 @@ for system in config['params']['systems']:
         print(f"No markdown file found for {name}. Skipping...")
         continue
 
-    updated_date = datetime.now(utc).isoformat()
+    updated_date = datetime.now(timezone.utc).isoformat()  # Using timezone-aware datetime
     lines = markdown_content.splitlines()
     for i, line in enumerate(lines):
         if line.startswith('date:'):
