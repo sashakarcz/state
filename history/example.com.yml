@@ -1,11 +1,12 @@
-code: 0
-expected:
-- 93.184.215.145
-generator: DNS Checker
-lastUpdated: '2024-10-25T19:45:33.169661'
-responseTime: 0
-result:
-- 93.184.215.14
-startTime: '2024-10-25T19:45:32.827150'
-status: down
+actualStatus: 200
+code: 1
+expectedStatuses:
+- 200
+- 301
+- 302
+generator: HTTP Checker
+lastUpdated: '2024-10-25T19:49:17.605181'
+responseTime: 0.00683
+startTime: '2024-10-25T19:49:17.514296'
+status: up
 url: http://example.com
