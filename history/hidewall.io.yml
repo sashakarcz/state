@@ -1,13 +1,13 @@
-actualStatus: 403
 code: 1
-expectedStatuses:
-- 200
-- 301
-- 302
-- 403
-generator: HTTP Checker
-lastUpdated: '2024-10-25T20:24:54.712122'
-responseTime: 0.140719
-startTime: '2024-10-25T20:24:54.568784'
+expected:
+- 104.21.32.197
+- 172.67.154.114
+generator: DNS Checker
+lastUpdated: '2024-10-25T20:26:38.753816'
+responseTime: 0
+result:
+- 172.67.154.114
+- 104.21.32.197
+startTime: '2024-10-25T20:26:38.499420'
 status: up
-url: https://hidewall.io
+url: http://hidewall.io
