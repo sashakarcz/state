@@ -1,11 +1,13 @@
-code: 0
-expected:
-- mail.example.net
-generator: DNS Checker
-lastUpdated: '2024-10-25T20:35:59.399095'
-responseTime: 0
-result:
-- No record found
-startTime: '2024-10-25T20:35:59.063847'
+history:
+- expected:
+  - mail.example.net
+  result:
+  - No record found
+  status: down
+  timestamp: '2024-10-25T21:07:26.170504+00:00'
+  type: dns
+resolved: false
+resolvedStartTime: null
+resolvedWhen: null
 status: down
 url: http://mail.example.com

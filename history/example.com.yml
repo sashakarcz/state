@@ -1,11 +1,18 @@
-code: 0
-expected:
-- 93.184.215.145
-generator: DNS Checker
-lastUpdated: '2024-10-25T20:35:59.245326'
-responseTime: 0
-result:
-- 93.184.215.14
-startTime: '2024-10-25T20:35:59.063847'
+history:
+- actualStatus: 200
+  responseTime: 0.038666
+  status: up
+  timestamp: '2024-10-25T21:05:04.793173+00:00'
+  type: http
+- expected:
+  - 93.184.215.145
+  result:
+  - 93.184.215.14
+  status: down
+  timestamp: '2024-10-25T21:07:26.117382+00:00'
+  type: dns
+resolved: false
+resolvedStartTime: null
+resolvedWhen: null
 status: down
 url: http://example.com

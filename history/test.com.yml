@@ -1,12 +1,14 @@
-code: 0
-expected:
-- 192.0.2.1
-generator: DNS Checker
-lastUpdated: '2024-10-25T20:35:59.352612'
-responseTime: 0
-result:
-- 3.18.255.247
-- 34.224.149.186
-startTime: '2024-10-25T20:35:59.063847'
+history:
+- expected:
+  - 192.0.2.1
+  result:
+  - 3.18.255.247
+  - 34.224.149.186
+  status: down
+  timestamp: '2024-10-25T21:07:26.145009+00:00'
+  type: dns
+resolved: false
+resolvedStartTime: null
+resolvedWhen: null
 status: down
 url: http://test.com

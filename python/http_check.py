@@ -1,31 +1,28 @@
 import yaml
 import requests
 from datetime import datetime
+import zoneinfo
 import os
 
-
-# Load the config.yml file
+# Load config.yml
 with open('config.yml', 'r') as file:
     config = yaml.safe_load(file)
 
+# Initialize start time
+utc = zoneinfo.ZoneInfo('UTC')
+start_time = datetime.now(utc).isoformat()
 
-# Initialize the start time
-start_time = datetime.utcnow().isoformat()
-
-
-# Function to generate or update a markdown file for HTTP issues
+# Function to generate/update markdown file for HTTP issues
 def update_issue_markdown(name, url, expected_statuses, actual_status, status, resolved_start_time=None):
-    # Define filename for the markdown file in content/issues/
-    date_str = datetime.utcnow().strftime("%Y-%m-%d")
+    date_str = datetime.now(utc).strftime("%Y-%m-%d")
     file_path = f"content/issues/{date_str}-{name}-http.md"
     is_resolved = (status == "up")
-    
-    # Content of the markdown file
+
     markdown_content = f"""---
 title: HTTP Status {'resolved' if is_resolved else 'incorrect'} for {name}
-date: {datetime.utcnow().isoformat()}
+date: {datetime.now(utc).isoformat()}
 resolved: {is_resolved}
-resolvedWhen: {'null' if not is_resolved else datetime.utcnow().isoformat()}
+resolvedWhen: {'null' if not is_resolved else datetime.now(utc).isoformat()}
 resolvedStartTime: {'null' if not is_resolved or resolved_start_time is None else resolved_start_time}
 severity: {"down" if status == "down" else "notice"}
 affected:
@@ -37,81 +34,76 @@ section: issue
 |-------------------|----------------|
 | {', '.join(map(str, expected_statuses))} | {actual_status} |
 """
-    # Write or update the markdown file
     with open(file_path, 'w') as md_file:
         md_file.write(markdown_content)
 
-
-# Function to run an HTTP status check
+# Function to run HTTP status check
 def run_http_check(name, url, expected_statuses):
     print(f"Running HTTP check for {name} (URL: {url}, Expected: {expected_statuses})")
     try:
-        # Send HTTP request with a 5-second timeout
         response = requests.get(url, timeout=5)
         actual_status = response.status_code
 
-        # Determine if the HTTP check passed or failed
         status = "up" if actual_status in expected_statuses else "down"
-        
-        # Load existing YAML file to check resolved status
+
         try:
             with open(f'history/{name}.yml', 'r') as domain_file:
                 existing_data = yaml.safe_load(domain_file)
-                resolved = existing_data.get('resolved', False)
-                resolved_start_time = existing_data.get('resolvedStartTime', None)
         except FileNotFoundError:
-            resolved = False
-            resolved_start_time = None
-        
-        if status == "up" and not resolved:
-            # Service became healthy, set resolved and resolvedStartTime
-            resolved = True
-            resolved_start_time = datetime.utcnow().isoformat()
-        elif status == "down" and resolved:
-            # Service became unhealthy, reset resolved and resolvedStartTime
-            resolved = False
-            resolved_start_time = None
-        
-        # Update YAML file
+            existing_data = {
+                'url': url,
+                'status': None,
+                'history': [],
+                'resolved': False,
+                'resolvedWhen': None,
+                'resolvedStartTime': None
+            }
+
+        # Ensure required keys exist
+        existing_data.setdefault('history', [])
+        existing_data.setdefault('resolved', False)
+        existing_data.setdefault('resolvedWhen', None)
+        existing_data.setdefault('resolvedStartTime', None)
+
+        history_entry = {
+            'timestamp': datetime.now(utc).isoformat(),
+            'status': status,
+            'actualStatus': actual_status,
+            'responseTime': response.elapsed.total_seconds(),
+            'type': 'http'
+        }
+        existing_data['history'].append(history_entry)
+
+        existing_data['status'] = status
+        if status == "up" and not existing_data['resolved']:
+            existing_data['resolved'] = True
+            existing_data['resolvedStartTime'] = datetime.now(utc).isoformat()
+            existing_data['resolvedWhen'] = datetime.now(utc).isoformat()
+        elif status == "down" and existing_data['resolved']:
+            existing_data['resolved'] = False
+            existing_data['resolvedStartTime'] = None
+            existing_data['resolvedWhen'] = None
+
         os.makedirs('history', exist_ok=True)
         with open(f'history/{name}.yml', 'w') as domain_file:
-            yaml.dump({
-                "url": url,
-                "status": status,
-                "code": 1 if status == "up" else 0,
-                "responseTime": response.elapsed.total_seconds(),
-                "lastUpdated": datetime.utcnow().isoformat(),
-                "startTime": start_time if not resolved else existing_data['startTime'],
-                "resolved": resolved,
-                "resolvedWhen": datetime.utcnow().isoformat() if resolved else None,
-                "resolvedStartTime": resolved_start_time,
-                "actualStatus": actual_status,
-                "expectedStatuses": expected_statuses,
-                "generator": "HTTP Checker"
-            }, domain_file, default_flow_style=False)
-        
-        # Update markdown file
-        update_issue_markdown(name, url, expected_statuses, actual_status, status, resolved_start_time)
-    
+            yaml.dump(existing_data, domain_file, default_flow_style=False)
+
+        update_issue_markdown(name, url, expected_statuses, actual_status, status, existing_data.get('resolvedStartTime'))
+
     except requests.RequestException as e:
         print(f"Error during HTTP check for {name}: {str(e)}")
-        # Handle errors and create markdown file with error details
         update_issue_markdown(name, url, expected_statuses, "Error", "down")
 
-
-# Iterate over entries in the systems section and filter HTTP checks
+# Iterate over entries in systems section and filter HTTP checks
 for entry in config['params']['systems']:
-    if 'link' in entry:  # Check for HTTP-specific keys
+    if 'link' in entry:
         name = entry['name']
         url = entry['link']
-        expected_statuses = entry.get('expected_status', [200])  # Default to [200] if unspecified
+        expected_statuses = entry.get('expected_status', [200])
 
-        # Ensure expected_statuses is a list
         if not isinstance(expected_statuses, list):
             expected_statuses = [expected_statuses]
 
-        # Run the HTTP check
         run_http_check(name, url, expected_statuses)
-
 
 print("HTTP check completed. Markdown files updated for issues.")
