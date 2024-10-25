@@ -61,6 +61,17 @@ for system in config['params']['systems']:
         print(f"No markdown file found for {name}. Skipping...")
         continue
 
+    # Update date field
+    updated_date = datetime.now(utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    lines = markdown_content.splitlines()
+    for i, line in enumerate(lines):
+        if line.startswith('date:'):
+            lines[i] = f'date: {updated_date}'
+            break
+    else:
+        lines.insert(1, f'date: {updated_date}')
+    markdown_content = '\n'.join(lines)
+
     # Add link to graph if it doesn't exist
     link = f'[Up/Down State History Graph]({name}-http.html)'
     if link not in markdown_content:
@@ -69,4 +80,3 @@ for system in config['params']['systems']:
     # Write updated markdown content
     with open(markdown_file, 'w') as file:
         file.write(markdown_content)
-
