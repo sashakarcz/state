@@ -2,13 +2,13 @@ code: 0
 expected:
 - mail.example.net
 generator: DNS Checker
-lastUpdated: '2024-10-25T20:44:01.972686'
+lastUpdated: '2024-10-25T20:52:10.066755'
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
 responseTime: 0
 result:
 - No record found
-startTime: '2024-10-25T20:44:01.516940'
+startTime: '2024-10-25T20:52:09.476642'
 status: down
 url: http://mail.example.com
