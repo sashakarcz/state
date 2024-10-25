@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Status History</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .status-bar {
+      max-width: 400px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .status {
+      font-size: 18px;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .status.ok { background-color: #d4edda; color: #155724; }
+    .status.warning { background-color: #fff3cd; color: #856404; }
+    .status.critical { background-color: #f8d7da; color: #721c24; }
+
+    .history-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+
+    .history-list li {
+      margin-bottom: 8px;
+      padding: 8px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="status-bar">
+    <h2>Service Status</h2>
+    <div class="status ok">Current Status: All systems operational</div>
+    <h3>Status History</h3>
+    <ul class="history-list">
+      <li class="status ok">2023-10-01 10:00 - All systems operational</li>
+      <li class="status warning">2023-10-01 14:00 - Increased latency detected</li>
+      <li class="status critical">2023-10-02 09:30 - Service outage</li>
+      <li class="status ok">2023-10-02 15:00 - Systems restored</li>
+    </ul>
+  </div>
+</body>
+</html>
