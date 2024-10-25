@@ -1,4 +1,4 @@
-name: DNS CI
+name: http CI
 
 on:
   schedule:
