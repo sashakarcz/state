@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  dns_check:
+  http_check:
     runs-on: ubuntu-latest
 
     steps:
@@ -35,12 +35,12 @@ jobs:
         run: |
           git add .
 
-      # Commit and push the DNS results to the gh-pages branch
+      # Commit and push the http results to the gh-pages branch
       - name: Commit and Push Changes
         run: |
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
-          git commit -m "Update DNS Monitoring Results"
+          git commit -m "Update http Monitoring Results"
           git push origin master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
