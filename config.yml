@@ -176,7 +176,7 @@ params:
     link: http://example.com
     domain: example.com
     expected_record:
-      - 93.184.215.15
+      - 93.184.215.14
     record_type: A
     expected_status: [200, 301, 302]
 
