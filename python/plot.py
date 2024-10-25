@@ -69,8 +69,11 @@ for system in config['params']['systems']:
         print(f"No markdown file found for {name}. Skipping...")
         continue
 
+    # Default date value if none exists
     updated_date = datetime.now(timezone.utc).isoformat()  # Using timezone-aware datetime
     lines = markdown_content.splitlines()
+    
+    # Check and insert date if missing
     for i, line in enumerate(lines):
         if line.startswith('date:'):
             lines[i] = f'date: {updated_date}'
@@ -88,4 +91,4 @@ for system in config['params']['systems']:
     with open(markdown_file, 'w') as file:
         file.write(markdown_content)
 
-print("Script completed. Graphs and markdown files updated.")
+print("Script executed successfully. Markdown files and graphs updated.")
