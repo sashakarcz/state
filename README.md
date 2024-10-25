@@ -14,6 +14,7 @@ params:
       expected_record:
         - 192.0.2.1
       record_type: A
+      expected_status: [200, 301, 302]
 ```
 
 1. Add a New System: Each system requires several fields to define what the DNS checker will monitor. Add a new entry under systems with the following details:
@@ -41,6 +42,7 @@ params:
         - 203.0.113.6
       record_type: A
       link: https://mediaproxy.example.com
+      expected_status: [200, 301, 302]
 ```
 This configuration sets up a DNS check for `mediaproxy.example.com`, expecting it to resolve to IP addresses `203.0.113.5` and `203.0.113.6`.
 
