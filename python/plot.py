@@ -3,6 +3,7 @@ import plotly.graph_objects as go
 import os
 from datetime import datetime, timezone
 import zoneinfo
+import re
 
 # Load config.yml
 with open('config.yml', 'r') as file:
@@ -10,6 +11,23 @@ with open('config.yml', 'r') as file:
 
 # Initialize UTC timezone
 utc = zoneinfo.ZoneInfo('UTC')
+
+# Define a regex pattern for ISO 8601 date validation
+iso8601_pattern = re.compile(
+    r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z$'
+)
+
+# Helper function to ensure date is in ISO 8601 format
+def validate_or_set_date(lines):
+    for i, line in enumerate(lines):
+        if line.startswith('date:'):
+            date_value = line.split('date: ')[1].strip()
+            if not iso8601_pattern.match(date_value):  # Check if it's a valid ISO 8601 date
+                # If not, replace it with the current UTC time
+                lines[i] = f'date: {datetime.now(timezone.utc).isoformat()}'
+            return
+    # If date is missing, add it after the first line
+    lines.insert(1, f'date: {datetime.now(timezone.utc).isoformat()}')
 
 # Iterate over systems
 for system in config['params']['systems']:
@@ -69,17 +87,11 @@ for system in config['params']['systems']:
         print(f"No markdown file found for {name}. Skipping...")
         continue
 
-    # Default date value if none exists
-    updated_date = datetime.now(timezone.utc).isoformat()  # Using timezone-aware datetime
     lines = markdown_content.splitlines()
     
-    # Check and insert date if missing
-    for i, line in enumerate(lines):
-        if line.startswith('date:'):
-            lines[i] = f'date: {updated_date}'
-            break
-    else:
-        lines.insert(1, f'date: {updated_date}')
+    # Validate or set the date field
+    validate_or_set_date(lines)
+    
     markdown_content = '\n'.join(lines)
 
     # Add link to graph if it doesn't exist
