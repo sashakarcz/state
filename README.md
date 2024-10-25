@@ -18,14 +18,14 @@ params:
 
 1. Add a New System: Each system requires several fields to define what the DNS checker will monitor. Add a new entry under systems with the following details:
 
-```
-name: A unique identifier for this system, which will be displayed in status reports.
-category: The category this system belongs to. Categories help organize systems by groups, such as "Backend" or "User-Facing Services." Categories are case-sensitive and must match exactly if used in multiple entries.
-domain: The domain name to monitor for DNS correctness.
-expected_record: A list of expected IP addresses (or other DNS records) that this domain should resolve to.
-record_type (optional): The type of DNS record to check, such as A, CNAME, or MX. Defaults to A if not specified.
-link (optional): A URL for additional information about this system.
-```
+
+| name | A unique identifier for this system, which will be displayed in status reports. |
+| category | The category this system belongs to. Categories help organize systems by groups, such as "Backend" or "User-Facing Services." Categories are case-sensitive and must match exactly if used in multiple entries. |
+|domain | The domain name to monitor for DNS correctness. |
+| expected_record | A list of expected IP addresses (or other DNS records) that this domain should resolve to. |
+| record_type (optional) | The type of DNS record to check, such as A, CNAME, or MX. Defaults to A if not specified. |
+| link (optional) | A URL for additional information about this system. |
+
 
 Example Configuration: Here’s an example of adding a new system named “Media Proxy”:
 
