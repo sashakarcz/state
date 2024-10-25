@@ -2,14 +2,14 @@ code: 0
 expected:
 - 192.0.2.1
 generator: DNS Checker
-lastUpdated: '2024-10-25T20:39:18.461429'
+lastUpdated: '2024-10-25T20:44:01.925725'
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
 responseTime: 0
 result:
-- 34.224.149.186
 - 3.18.255.247
-startTime: '2024-10-25T20:39:18.136562'
+- 34.224.149.186
+startTime: '2024-10-25T20:44:01.516940'
 status: down
 url: http://test.com
