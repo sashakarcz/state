@@ -69,7 +69,7 @@ for system in config['params']['systems']:
         print(f"No markdown file found for {name}. Skipping...")
         continue
 
-    updated_date = datetime.now(utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    updated_date = datetime.now(utc).isoformat()
     lines = markdown_content.splitlines()
     for i, line in enumerate(lines):
         if line.startswith('date:'):
