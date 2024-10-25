@@ -6,8 +6,8 @@ expectedStatuses:
 - 302
 - 403
 generator: HTTP Checker
-lastUpdated: '2024-10-25T20:03:12.108053'
-responseTime: 0.170713
-startTime: '2024-10-25T20:03:11.935731'
+lastUpdated: '2024-10-25T20:12:59.945231'
+responseTime: 0.196335
+startTime: '2024-10-25T20:12:59.747041'
 status: up
 url: https://hidewall.io
