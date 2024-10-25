@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  http_check:
+  dns_check:
     runs-on: ubuntu-latest
 
     steps:
