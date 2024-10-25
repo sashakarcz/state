@@ -3,26 +3,27 @@ import subprocess
 from datetime import datetime
 import os
 
-# Load the .upptimerc.yml file
+# Load the config.yml file
 with open('config.yml', 'r') as file:
     config = yaml.safe_load(file)
 
-# Initialize the results array
-start_time = datetime.utcnow().isoformat()  # Start time for all checks
+# Initialize the start time
+start_time = datetime.utcnow().isoformat()
 
 # Function to generate or update a markdown file for issues
-def update_issue_markdown(domain, expected_record, actual_record, status):
-    # Set filename for the markdown file in content/issues/
+def update_issue_markdown(domain, expected_record, actual_record, status, resolved_start_time=None):
+    # Define filename for the markdown file in content/issues/
     date_str = datetime.utcnow().strftime("%Y-%m-%d")
     file_path = f"content/issues/{date_str}-{domain}-dns.md"
     is_resolved = (status == "up")
     
-    # Set content of the markdown file
+    # Content of the markdown file
     markdown_content = f"""---
-title: DNS Record {'incorrect' if not is_resolved else 'resolved'} for {domain}
+title: DNS Record {'resolved' if is_resolved else 'incorrect'} for {domain}
 date: {datetime.utcnow().isoformat()}
 resolved: {is_resolved}
 resolvedWhen: {'null' if not is_resolved else datetime.utcnow().isoformat()}
+resolvedStartTime: {'null' if not is_resolved or resolved_start_time is None else resolved_start_time}
 severity: {"down" if status == "down" else "notice"}
 affected:
   - {domain}
@@ -50,10 +51,26 @@ def run_dns_check(domain, expected_record, record_type, url=None):
         # Determine if the DNS check passed or failed
         status = "up" if set(result) == set(expected_record) else "down"
         
-        # Update or create markdown file for the issue
-        update_issue_markdown(domain, expected_record, result, status)
+        # Load existing YAML file to check resolved status
+        try:
+            with open(f'history/{domain}.yml', 'r') as domain_file:
+                existing_data = yaml.safe_load(domain_file)
+                resolved = existing_data.get('resolved', False)
+                resolved_start_time = existing_data.get('resolvedStartTime', None)
+        except FileNotFoundError:
+            resolved = False
+            resolved_start_time = None
         
-        # Save individual domain result to its respective YAML file
+        if status == "up" and not resolved:
+            # Service became healthy, set resolved and resolvedStartTime
+            resolved = True
+            resolved_start_time = datetime.utcnow().isoformat()
+        elif status == "down" and resolved:
+            # Service became unhealthy, reset resolved and resolvedStartTime
+            resolved = False
+            resolved_start_time = None
+        
+        # Update YAML file
         os.makedirs('history', exist_ok=True)
         with open(f'history/{domain}.yml', 'w') as domain_file:
             yaml.dump({
@@ -62,25 +79,22 @@ def run_dns_check(domain, expected_record, record_type, url=None):
                 "code": 1 if status == "up" else 0,
                 "responseTime": 0,
                 "lastUpdated": datetime.utcnow().isoformat(),
-                "startTime": start_time,
+                "startTime": start_time if not resolved else existing_data['startTime'],
+                "resolved": resolved,
+                "resolvedWhen": datetime.utcnow().isoformat() if resolved else None,
+                "resolvedStartTime": resolved_start_time,
                 "result": result,
                 "expected": expected_record,
                 "generator": "DNS Checker"
             }, domain_file, default_flow_style=False)
-
-        return {
-            "domain": domain,
-            "actual": result,
-            "expected": expected_record,
-            "timestamp": datetime.utcnow().isoformat(),
-            "status": status.capitalize()
-        }
-
+        
+        # Update markdown file
+        update_issue_markdown(domain, expected_record, result, status, resolved_start_time)
+    
     except subprocess.CalledProcessError as e:
         print(f"Error during DNS check for {domain}: {str(e)}")
         # Handle the error by creating a markdown file with error details
         update_issue_markdown(domain, expected_record, ["Error"], "down")
-        return None
 
 # Iterate over entries in the systems section and filter DNS checks
 for entry in config['params']['systems']:
