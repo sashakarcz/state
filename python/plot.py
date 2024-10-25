@@ -62,7 +62,7 @@ for system in config['params']['systems']:
         continue
 
     # Update date field
-    updated_date = datetime.now(utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    updated_date = datetime.now(utc).isoformat()
     lines = markdown_content.splitlines()
     for i, line in enumerate(lines):
         if line.startswith('date:'):
