@@ -856,6 +856,11 @@ history:
   status: up
   timestamp: '2024-10-26T10:07:06.762185+00:00'
   type: dns
+- actualStatus: 200
+  responseTime: 0.007966
+  status: up
+  timestamp: '2024-10-26T10:16:10.821616+00:00'
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
 resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
