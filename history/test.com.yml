@@ -810,6 +810,14 @@ history:
   status: down
   timestamp: '2024-10-26T13:49:20.791269+00:00'
   type: http
+- expected:
+  - 192.0.2.1
+  result:
+  - 3.18.255.247
+  - 34.224.149.186
+  status: down
+  timestamp: '2024-10-26T13:51:04.178885+00:00'
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
