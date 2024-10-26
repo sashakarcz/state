@@ -805,6 +805,11 @@ history:
   status: down
   timestamp: '2024-10-26T13:44:18.967977+00:00'
   type: dns
+- actualStatus: 403
+  responseTime: 0.050566
+  status: down
+  timestamp: '2024-10-26T13:49:20.791269+00:00'
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
