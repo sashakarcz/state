@@ -1919,6 +1919,11 @@ history:
   status: up
   timestamp: '2024-10-26T20:20:14.635719+00:00'
   type: dns
+- actualStatus: 403
+  responseTime: 0.069889
+  status: up
+  timestamp: '2024-10-26T20:24:18.663229+00:00'
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.161639+00:00'
 resolvedWhen: '2024-10-25T21:09:43.161643+00:00'
