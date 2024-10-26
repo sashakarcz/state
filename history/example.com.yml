@@ -1843,6 +1843,11 @@ history:
   status: up
   timestamp: '2024-10-26T22:37:54.470736+00:00'
   type: dns
+- actualStatus: 200
+  responseTime: 0.028629
+  status: up
+  timestamp: '2024-10-26T22:39:22.927496+00:00'
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
 resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
