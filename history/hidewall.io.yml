@@ -970,6 +970,11 @@ history:
   status: up
   timestamp: '2024-10-26T09:51:21.002710+00:00'
   type: http
+- actualStatus: 403
+  responseTime: 0.156382
+  status: up
+  timestamp: '2024-10-26T09:57:27.592130+00:00'
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.161639+00:00'
 resolvedWhen: '2024-10-25T21:09:43.161643+00:00'
