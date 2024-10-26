@@ -700,6 +700,11 @@ history:
   status: up
   timestamp: '2024-10-26T08:17:51.379636+00:00'
   type: http
+- actualStatus: 200
+  responseTime: 0.025414
+  status: up
+  timestamp: '2024-10-26T08:29:02.477674+00:00'
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
 resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
