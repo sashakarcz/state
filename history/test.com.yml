@@ -2377,6 +2377,14 @@ history:
   status: down
   timestamp: '2024-10-27T19:41:28.161598+00:00'
   type: dns
+- expected:
+  - 192.0.2.1
+  result:
+  - 3.18.255.247
+  - 34.224.149.186
+  status: down
+  timestamp: '2024-10-27T19:48:08.908940+00:00'
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
