@@ -1976,6 +1976,14 @@ history:
   status: down
   timestamp: '2024-10-27T12:41:30.770740+00:00'
   type: dns
+- expected:
+  - 192.0.2.1
+  result:
+  - 3.18.255.247
+  - 34.224.149.186
+  status: down
+  timestamp: '2024-10-27T12:55:18.121596+00:00'
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
