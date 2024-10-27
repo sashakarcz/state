@@ -1429,6 +1429,11 @@ history:
   status: down
   timestamp: '2024-10-27T00:58:58.462534+00:00'
   type: dns
+- actualStatus: 403
+  responseTime: 0.026809
+  status: down
+  timestamp: '2024-10-27T01:33:43.245676+00:00'
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
