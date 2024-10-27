@@ -1984,6 +1984,14 @@ history:
   status: down
   timestamp: '2024-10-27T12:55:18.121596+00:00'
   type: dns
+- expected:
+  - 192.0.2.1
+  result:
+  - 34.224.149.186
+  - 3.18.255.247
+  status: down
+  timestamp: '2024-10-27T13:05:51.576072+00:00'
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
