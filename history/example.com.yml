@@ -3550,6 +3550,13 @@ history:
   status: up
   timestamp: '2024-10-27T22:36:58.420139+00:00'
   type: http
+- expected:
+  - 93.184.215.14
+  result:
+  - 93.184.215.14
+  status: up
+  timestamp: '2024-10-27T22:38:10.856941+00:00'
+  type: dns
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
 resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
