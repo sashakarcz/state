@@ -2613,6 +2613,11 @@ history:
   status: down
   timestamp: '2024-10-27T23:50:55.599901+00:00'
   type: dns
+- actualStatus: 403
+  responseTime: 0.05319
+  status: down
+  timestamp: '2024-10-27T23:56:01.108940+00:00'
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
