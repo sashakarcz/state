@@ -3443,6 +3443,11 @@ history:
   status: down
   timestamp: '2024-10-28T17:27:35.576399+00:00'
   type: dns
+- actualStatus: 403
+  responseTime: 0.028118
+  status: down
+  timestamp: '2024-10-28T17:29:06.566823+00:00'
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
