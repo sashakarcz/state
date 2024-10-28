@@ -4711,6 +4711,11 @@ history:
   status: up
   timestamp: '2024-10-28T16:12:56.172615+00:00'
   type: dns
+- actualStatus: 200
+  responseTime: 0.019817
+  status: up
+  timestamp: '2024-10-28T16:20:17.451548+00:00'
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
 resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
