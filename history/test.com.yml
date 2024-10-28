@@ -2663,6 +2663,14 @@ history:
   status: down
   timestamp: '2024-10-28T02:12:08.762604+00:00'
   type: http
+- expected:
+  - 192.0.2.1
+  result:
+  - 34.224.149.186
+  - 3.18.255.247
+  status: down
+  timestamp: '2024-10-28T02:38:39.871116+00:00'
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
