@@ -2843,6 +2843,14 @@ history:
   status: down
   timestamp: '2024-10-28T06:23:01.564199+00:00'
   type: http
+- expected:
+  - 192.0.2.1
+  result:
+  - 34.224.149.186
+  - 3.18.255.247
+  status: down
+  timestamp: '2024-10-28T06:26:20.352502+00:00'
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
