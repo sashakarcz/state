@@ -1,99 +1,131 @@
 import yaml
-import plotly.graph_objects as go
-import os
-from datetime import datetime, timezone
+import requests
+from datetime import datetime
 import zoneinfo
+import os
 
 # Load config.yml
 with open('config.yml', 'r') as file:
     config = yaml.safe_load(file)
 
-# Initialize UTC timezone
+# Initialize start time
 utc = zoneinfo.ZoneInfo('UTC')
+start_time = datetime.now(utc).isoformat()
 
-# Function to add or update the date field in markdown files
-def add_or_update_date(lines):
-    # Check if the date field is present; update or insert it
-    found_date = False
-    for i, line in enumerate(lines):
-        if line.startswith("date:"):
-            found_date = True
-            lines[i] = f"date: {datetime.now(utc).isoformat()}"
-    if not found_date:
-        # Insert date after the front matter start
-        lines.insert(1, f"date: {datetime.now(utc).isoformat()}")
-    return lines
+# Function to generate/update markdown file for HTTP issues
+def update_issue_markdown(name, url, expected_statuses, actual_status, status, resolved_start_time=None):
+    date_str = datetime.now(utc).strftime("%Y-%m-%d")
+    file_path = f"content/issues/{date_str}-{name}-http.md"
+    is_resolved = (status == "up")
+    
+    # Default markdown content
+    markdown_content = f"""---
+title: HTTP Status {'resolved' if is_resolved else 'incorrect'} for {name}
+date: {datetime.now(utc).isoformat()}
+resolved: {is_resolved}
+resolvedWhen: {'null' if not is_resolved else datetime.now(utc).isoformat()}
+resolvedStartTime: {'null' if not is_resolved or resolved_start_time is None else resolved_start_time}
+severity: {"down" if status == "down" else "notice"}
+affected:
+  - {name}
+section: issue
+---
 
-# Iterate over systems in config
-for system in config['params']['systems']:
-    name = system['name']
-    domain = system.get('domain', name)
+| Expected Statuses | Actual Status  |
+|-------------------|----------------|
+| {', '.join(map(str, expected_statuses))} | {actual_status} |
+"""
 
-    # Load YAML data
+    # Check if the rawhtml block is already present
+    rawhtml_block = f"""
+{{% rawhtml %}}
+<embed src="./{name}-http.html" type="text/html">
+{{% /rawhtml %}}
+"""
+    if os.path.exists(file_path):
+        with open(file_path, 'r') as md_file:
+            current_content = md_file.read()
+            # Only add the rawhtml block if it's not already in the file
+            if rawhtml_block.strip() not in current_content:
+                markdown_content += rawhtml_block
+            else:
+                # Preserve existing content and avoid duplication of rawhtml block
+                markdown_content = current_content
+    else:
+        # If file doesn't exist, add rawhtml block by default
+        markdown_content += rawhtml_block
+
+    # Write updated content back to the markdown file
+    with open(file_path, 'w') as md_file:
+        md_file.write(markdown_content)
+
+# Function to run HTTP status check
+def run_http_check(name, url, expected_statuses):
+    print(f"Running HTTP check for {name} (URL: {url}, Expected: {expected_statuses})")
     try:
-        with open(f'history/{domain}.yml', 'r') as file:
-            data = yaml.safe_load(file)
-    except FileNotFoundError:
-        print(f"No history file found for {domain}. Skipping...")
-        continue
+        response = requests.get(url, timeout=5)
+        actual_status = response.status_code
 
-    # Extract up/down state history
-    history = data['history']
-    up_down_states = [entry['status'] for entry in history]
-    timestamps = [entry['timestamp'] for entry in history]
+        status = "up" if actual_status in expected_statuses else "down"
 
-    # Create Plotly graph
-    fig = go.Figure(data=[go.Scatter(
-        x=timestamps,
-        y=[1 if state == 'up' else 0 for state in up_down_states],
-        mode='lines+markers'
-    )])
+        try:
+            with open(f'history/{name}.yml', 'r') as domain_file:
+                existing_data = yaml.safe_load(domain_file)
+        except FileNotFoundError:
+            existing_data = {
+                'url': url,
+                'status': None,
+                'history': [],
+                'resolved': False,
+                'resolvedWhen': None,
+                'resolvedStartTime': None
+            }
 
-    # Customize graph layout
-    fig.update_layout(
-        title=f'Up/Down State History for {name}',
-        xaxis_title='Time (UTC)',
-        yaxis_title='State',
-        yaxis=dict(range=[0, 1.1])
-    )
+        # Ensure required keys exist
+        existing_data.setdefault('history', [])
+        existing_data.setdefault('resolved', False)
+        existing_data.setdefault('resolvedWhen', None)
+        existing_data.setdefault('resolvedStartTime', None)
 
-    # Create directories if they don't exist
-    os.makedirs('content/issues', exist_ok=True)
-    os.makedirs('layouts/partials/custom', exist_ok=True)
+        history_entry = {
+            'timestamp': datetime.now(utc).isoformat(),
+            'status': status,
+            'actualStatus': actual_status,
+            'responseTime': response.elapsed.total_seconds(),
+            'type': 'http'
+        }
+        existing_data['history'].append(history_entry)
 
-    # Create partial HTML file for linking the graph
-    partial_file = f'layouts/partials/custom/{name}-http.html'
-    with open(partial_file, 'w') as file:
-        file.write(f"""<div>
-  {{ partial "graph" . }}
-</div>
-""")
+        existing_data['status'] = status
+        if status == "up" and not existing_data['resolved']:
+            existing_data['resolved'] = True
+            existing_data['resolvedStartTime'] = datetime.now(utc).isoformat()
+            existing_data['resolvedWhen'] = datetime.now(utc).isoformat()
+        elif status == "down" and existing_data['resolved']:
+            existing_data['resolved'] = False
+            existing_data['resolvedStartTime'] = None
+            existing_data['resolvedWhen'] = None
 
-    # Save graph as HTML file
-    fig.write_html(f'content/issues/{name}-http.html')
+        os.makedirs('history', exist_ok=True)
+        with open(f'history/{name}.yml', 'w') as domain_file:
+            yaml.dump(existing_data, domain_file, default_flow_style=False)
 
-    # Update or create the markdown file with date
-    date_str = timestamps[-1][:10]  # Extract date from latest timestamp
-    markdown_file = f'content/issues/{date_str}-{name}-http.md'
-    try:
-        with open(markdown_file, 'r') as file:
-            markdown_content = file.read().splitlines()
-    except FileNotFoundError:
-        # Initialize empty front matter if file not found
-        markdown_content = ["---", "---"]
+        update_issue_markdown(name, url, expected_statuses, actual_status, status, existing_data.get('resolvedStartTime'))
 
-    # Ensure the date is correctly set
-    markdown_content = add_or_update_date(markdown_content)
+    except requests.RequestException as e:
+        print(f"Error during HTTP check for {name}: {str(e)}")
+        update_issue_markdown(name, url, expected_statuses, "Error", "down")
 
-    # Add link to the graph if it's not already in the markdown content
-    link = f'[Up/Down State History Graph]({name}-http.html)'
-    if link not in markdown_content:
-        markdown_content.append(f'\n\n{link}')
+# Iterate over entries in systems section and filter HTTP checks
+for entry in config['params']['systems']:
+    if 'link' in entry:
+        name = entry['name']
+        url = entry['link']
+        expected_statuses = entry.get('expected_status', [200])
 
-    # Write updated content back to markdown file
-    with open(markdown_file, 'w') as file:
-        file.write("\n".join(markdown_content))
+        if not isinstance(expected_statuses, list):
+            expected_statuses = [expected_statuses]
 
-    print(f"Updated markdown for {name}.")
+        run_http_check(name, url, expected_statuses)
 
-print("Script executed successfully.")
+print("HTTP check completed. Markdown files updated for issues.")
