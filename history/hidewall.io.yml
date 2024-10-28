@@ -4303,6 +4303,11 @@ history:
   status: up
   timestamp: '2024-10-28T00:56:45.454297+00:00'
   type: dns
+- actualStatus: 403
+  responseTime: 0.180733
+  status: up
+  timestamp: '2024-10-28T01:01:26.602557+00:00'
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.161639+00:00'
 resolvedWhen: '2024-10-25T21:09:43.161643+00:00'
