@@ -4557,6 +4557,11 @@ history:
   status: down
   timestamp: '2024-10-29T15:04:20.739679+00:00'
   type: http
+- actualStatus: 403
+  responseTime: 0.046483
+  status: down
+  timestamp: '2024-10-29T15:10:09.022592+00:00'
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
