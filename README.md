@@ -3,7 +3,7 @@
 
 1. Open config.yml: In your project root, locate and open the config.yml file where the monitoring configuration is defined.
 
-1 .Locate the Systems Section: The systems configuration is nested under params. Find the systems list within params, which looks like this:
+2 .Locate the Systems Section: The systems configuration is nested under params. Find the systems list within params, which looks like this:
 
 ```yaml
 params:
@@ -17,7 +17,7 @@ params:
       expected_status: [200, 301, 302]
 ```
 
-1. Add a New System: Each system requires several fields to define what the DNS checker will monitor. Add a new entry under systems with the following details:
+3. Add a New System: Each system requires several fields to define what the DNS checker will monitor. Add a new entry under systems with the following details:
 
 | Variable | Description |
 |----------|-------------|
