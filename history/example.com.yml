@@ -6752,6 +6752,11 @@ history:
   status: up
   timestamp: '2024-10-29T16:47:36.293672+00:00'
   type: dns
+- actualStatus: 200
+  responseTime: 0.009125
+  status: up
+  timestamp: '2024-10-29T16:53:18.383651+00:00'
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
 resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
