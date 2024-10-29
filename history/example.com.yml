@@ -5418,6 +5418,11 @@ history:
   status: up
   timestamp: '2024-10-29T02:34:52.580942+00:00'
   type: dns
+- actualStatus: 200
+  responseTime: 0.022922
+  status: up
+  timestamp: '2024-10-29T02:36:31.786819+00:00'
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
 resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
