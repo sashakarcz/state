@@ -7057,6 +7057,13 @@ history:
   status: up
   timestamp: '2024-10-29T20:40:32.174084+00:00'
   type: dns
+- expected:
+  - 93.184.215.14
+  result:
+  - 93.184.215.14
+  status: up
+  timestamp: '2024-10-29T20:47:12.760150+00:00'
+  type: dns
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
 resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
