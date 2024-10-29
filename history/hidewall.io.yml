@@ -7028,6 +7028,15 @@ history:
   status: up
   timestamp: '2024-10-29T09:15:53.216494+00:00'
   type: http
+- expected:
+  - 104.21.32.197
+  - 172.67.154.114
+  result:
+  - 172.67.154.114
+  - 104.21.32.197
+  status: up
+  timestamp: '2024-10-29T09:20:42.099699+00:00'
+  type: dns
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.161639+00:00'
 resolvedWhen: '2024-10-25T21:09:43.161643+00:00'
