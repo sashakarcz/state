@@ -6772,6 +6772,11 @@ history:
   status: up
   timestamp: '2024-10-29T07:01:36.563961+00:00'
   type: dns
+- actualStatus: 403
+  responseTime: 0.143924
+  status: up
+  timestamp: '2024-10-29T07:07:29.515414+00:00'
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.161639+00:00'
 resolvedWhen: '2024-10-25T21:09:43.161643+00:00'
