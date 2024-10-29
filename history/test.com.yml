@@ -3882,6 +3882,11 @@ history:
   status: down
   timestamp: '2024-10-29T02:06:29.063790+00:00'
   type: dns
+- actualStatus: 403
+  responseTime: 0.045444
+  status: down
+  timestamp: '2024-10-29T02:08:51.489559+00:00'
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
