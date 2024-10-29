@@ -3840,6 +3840,11 @@ history:
   status: down
   timestamp: '2024-10-28T23:58:00.285255+00:00'
   type: dns
+- actualStatus: 403
+  responseTime: 0.034449
+  status: down
+  timestamp: '2024-10-29T00:19:01.857832+00:00'
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
