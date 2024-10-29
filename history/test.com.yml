@@ -4912,6 +4912,11 @@ history:
   status: down
   timestamp: '2024-10-29T21:44:12.120981+00:00'
   type: dns
+- actualStatus: 403
+  responseTime: 0.042668
+  status: down
+  timestamp: '2024-10-29T21:49:48.053792+00:00'
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
