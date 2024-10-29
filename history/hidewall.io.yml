@@ -6786,6 +6786,11 @@ history:
   status: up
   timestamp: '2024-10-29T07:11:58.554399+00:00'
   type: dns
+- actualStatus: 403
+  responseTime: 0.199469
+  status: up
+  timestamp: '2024-10-29T07:17:52.854582+00:00'
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.161639+00:00'
 resolvedWhen: '2024-10-25T21:09:43.161643+00:00'
