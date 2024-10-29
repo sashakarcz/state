@@ -67,6 +67,18 @@ for system in config['params']['systems']:
     if embed_code not in markdown_content:
         markdown_content += f"\n\n{embed_code}"
 
+    # Ensure the date is in UTC ISO 8601 format for CState
+    updated_date = datetime.now(timezone.utc).isoformat()
+    if "date:" in markdown_content:
+        lines = markdown_content.splitlines()
+        for i, line in enumerate(lines):
+            if line.startswith('date:'):
+                lines[i] = f'date: {updated_date}'
+                break
+        markdown_content = '\n'.join(lines)
+    else:
+        markdown_content = f"date: {updated_date}\n" + markdown_content
+
     # Write updated markdown content
     with open(markdown_file, 'w') as file:
         file.write(markdown_content)
