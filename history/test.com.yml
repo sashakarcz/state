@@ -4012,6 +4012,11 @@ history:
   status: down
   timestamp: '2024-10-29T05:13:47.934518+00:00'
   type: dns
+- actualStatus: 403
+  responseTime: 0.042082
+  status: down
+  timestamp: '2024-10-29T05:20:11.117802+00:00'
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
