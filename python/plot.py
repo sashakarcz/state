@@ -1,7 +1,7 @@
 import yaml
 import plotly.graph_objects as go
 import os
-from datetime import datetime, timezone
+from datetime import datetime
 import zoneinfo
 
 # Load config.yml
@@ -68,7 +68,7 @@ for system in config['params']['systems']:
         markdown_content += f"\n\n{embed_code}"
 
     # Ensure the date is in UTC ISO 8601 format for CState
-    updated_date = datetime.now(timezone.utc).isoformat()
+    updated_date = datetime.now(utc).isoformat() + 'Z'
     if "date:" in markdown_content:
         lines = markdown_content.splitlines()
         for i, line in enumerate(lines):
