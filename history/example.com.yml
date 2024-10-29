@@ -5663,6 +5663,11 @@ history:
   status: up
   timestamp: '2024-10-29T05:25:24.867537+00:00'
   type: dns
+- actualStatus: 200
+  responseTime: 0.008473
+  status: up
+  timestamp: '2024-10-29T05:29:53.806856+00:00'
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
 resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
