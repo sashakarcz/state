@@ -8683,6 +8683,11 @@ history:
   status: up
   timestamp: '2024-10-30T04:32:24.083837+00:00'
   type: dns
+- actualStatus: 403
+  responseTime: 0.213144
+  status: up
+  timestamp: '2024-10-30T04:35:48.854219+00:00'
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.161639+00:00'
 resolvedWhen: '2024-10-25T21:09:43.161643+00:00'
