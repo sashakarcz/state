@@ -8178,6 +8178,11 @@ history:
   status: up
   timestamp: '2024-10-30T14:31:02.974475+00:00'
   type: dns
+- actualStatus: 200
+  responseTime: 0.029199
+  status: up
+  timestamp: '2024-10-30T14:33:14.747567+00:00'
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
 resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
