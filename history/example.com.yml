@@ -8130,6 +8130,11 @@ history:
   status: up
   timestamp: '2024-10-30T13:52:54.220894+00:00'
   type: dns
+- actualStatus: 200
+  responseTime: 0.014215
+  status: up
+  timestamp: '2024-10-30T13:55:40.335665+00:00'
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
 resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
