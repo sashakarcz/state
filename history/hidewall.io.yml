@@ -8898,6 +8898,11 @@ history:
   status: up
   timestamp: '2024-10-30T07:37:26.720155+00:00'
   type: dns
+- actualStatus: 403
+  responseTime: 0.232624
+  status: up
+  timestamp: '2024-10-30T07:43:31.409460+00:00'
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.161639+00:00'
 resolvedWhen: '2024-10-25T21:09:43.161643+00:00'
