@@ -4570,6 +4570,13 @@ history:
   status: down
   timestamp: '2024-10-30T15:20:44.139481+00:00'
   type: dns
+- expected:
+  - mail.example.net
+  result:
+  - No record found
+  status: down
+  timestamp: '2024-10-30T15:39:08.209674+00:00'
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null

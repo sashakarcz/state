@@ -5743,6 +5743,14 @@ history:
   status: down
   timestamp: '2024-10-30T15:30:35.447192+00:00'
   type: http
+- expected:
+  - 192.0.2.1
+  result:
+  - 3.18.255.247
+  - 34.224.149.186
+  status: down
+  timestamp: '2024-10-30T15:39:07.747032+00:00'
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
