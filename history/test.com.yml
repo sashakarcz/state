@@ -5418,6 +5418,11 @@ history:
   status: down
   timestamp: '2024-10-30T09:40:47.643709+00:00'
   type: dns
+- actualStatus: 403
+  responseTime: 0.047359
+  status: down
+  timestamp: '2024-10-30T09:41:35.719436+00:00'
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
