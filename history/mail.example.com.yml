@@ -4080,6 +4080,13 @@ history:
   status: down
   timestamp: '2024-10-30T03:08:37.987859+00:00'
   type: dns
+- expected:
+  - mail.example.net
+  result:
+  - No record found
+  status: down
+  timestamp: '2024-10-30T03:21:39.122139+00:00'
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null

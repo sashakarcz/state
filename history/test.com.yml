@@ -5118,6 +5118,14 @@ history:
   status: down
   timestamp: '2024-10-30T03:19:48.122191+00:00'
   type: http
+- expected:
+  - 192.0.2.1
+  result:
+  - 34.224.149.186
+  - 3.18.255.247
+  status: down
+  timestamp: '2024-10-30T03:21:38.598028+00:00'
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
