@@ -10,7 +10,7 @@ with open('config.yml', 'r') as file:
 
 # Initialize start time
 utc = zoneinfo.ZoneInfo('UTC')
-start_time = datetime.now(utc).isoformat()
+start_time = datetime.now(utc).replace(microsecond=0).isoformat() + 'Z'
 
 # Function to generate/update markdown file for DNS issues
 def update_issue_markdown(domain, expected_record, actual_record, status, resolved_start_time=None):
@@ -20,9 +20,9 @@ def update_issue_markdown(domain, expected_record, actual_record, status, resolv
 
     markdown_content = f"""---
 title: DNS Record {'resolved' if is_resolved else 'incorrect'} for {domain}
-date: {datetime.now(utc).isoformat()}
+date: {datetime.now(utc).replace(microsecond=0).isoformat()}Z
 resolved: {is_resolved}
-resolvedWhen: {'null' if not is_resolved else datetime.now(utc).isoformat()}
+resolvedWhen: {'null' if not is_resolved else datetime.now(utc).replace(microsecond=0).isoformat() + 'Z'}
 resolvedStartTime: {'null' if not is_resolved or resolved_start_time is None else resolved_start_time}
 severity: {"down" if status == "down" else "notice"}
 affected:
@@ -68,7 +68,7 @@ def run_dns_check(domain, expected_record, record_type, url=None):
         existing_data.setdefault('resolvedStartTime', None)
 
         history_entry = {
-            'timestamp': datetime.now(utc).isoformat(),
+            'timestamp': datetime.now(utc).replace(microsecond=0).isoformat() + 'Z',
             'status': status,
             'result': result,
             'expected': expected_record,
@@ -78,9 +78,10 @@ def run_dns_check(domain, expected_record, record_type, url=None):
 
         existing_data['status'] = status
         if status == "up" and not existing_data['resolved']:
+            current_time_iso = datetime.now(utc).replace(microsecond=0).isoformat() + 'Z'
             existing_data['resolved'] = True
-            existing_data['resolvedStartTime'] = datetime.now(utc).isoformat()
-            existing_data['resolvedWhen'] = datetime.now(utc).isoformat()
+            existing_data['resolvedStartTime'] = current_time_iso
+            existing_data['resolvedWhen'] = current_time_iso
         elif status == "down" and existing_data['resolved']:
             existing_data['resolved'] = False
             existing_data['resolvedStartTime'] = None
