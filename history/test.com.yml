@@ -5328,6 +5328,11 @@ history:
   status: down
   timestamp: '2024-10-30T07:58:08.017699+00:00'
   type: dns
+- actualStatus: 403
+  responseTime: 0.040947
+  status: down
+  timestamp: '2024-10-30T08:05:24.613366+00:00'
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
