@@ -6248,6 +6248,11 @@ history:
   status: down
   timestamp: 2024-10-30T23:58:05+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.040362
+  status: down
+  timestamp: 2024-10-30T23:59:15+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
