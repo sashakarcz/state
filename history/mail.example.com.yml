@@ -4423,6 +4423,13 @@ history:
   status: down
   timestamp: '2024-10-30T11:47:05.953171+00:00'
   type: dns
+- expected:
+  - mail.example.net
+  result:
+  - No record found
+  status: down
+  timestamp: '2024-10-30T11:53:52.137082+00:00'
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
