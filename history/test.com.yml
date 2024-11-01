@@ -7540,6 +7540,11 @@ history:
   status: down
   timestamp: 2024-11-01T04:45:29+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.035642
+  status: down
+  timestamp: 2024-11-01T04:48:34+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
