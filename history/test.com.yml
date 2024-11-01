@@ -7733,6 +7733,11 @@ history:
   status: down
   timestamp: 2024-11-01T08:42:19+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.115783
+  status: down
+  timestamp: 2024-11-01T08:48:07+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
