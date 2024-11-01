@@ -8088,6 +8088,11 @@ history:
   status: down
   timestamp: 2024-11-01T14:58:23+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.044404
+  status: down
+  timestamp: 2024-11-01T14:59:13+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
