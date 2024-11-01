@@ -8133,6 +8133,11 @@ history:
   status: down
   timestamp: 2024-11-01T15:46:08+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.049139
+  status: down
+  timestamp: 2024-11-01T15:50:39+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
