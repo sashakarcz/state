@@ -9914,6 +9914,11 @@ history:
   status: down
   timestamp: 2024-11-02T23:50:48+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.028648
+  status: down
+  timestamp: 2024-11-02T23:52:25+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
