@@ -9177,6 +9177,11 @@ history:
   status: down
   timestamp: 2024-11-02T11:30:15+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.050021
+  status: down
+  timestamp: 2024-11-02T11:30:40+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
