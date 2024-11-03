@@ -10123,6 +10123,11 @@ history:
   status: down
   timestamp: 2024-11-03T06:21:39+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.041402
+  status: down
+  timestamp: 2024-11-03T06:29:10+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
