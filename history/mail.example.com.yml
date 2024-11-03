@@ -8077,6 +8077,13 @@ history:
   status: down
   timestamp: 2024-11-03T06:35:52+00:00Z
   type: dns
+- expected:
+  - mail.example.net
+  result:
+  - No record found
+  status: down
+  timestamp: 2024-11-03T06:46:32+00:00Z
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
