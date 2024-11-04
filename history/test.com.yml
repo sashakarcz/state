@@ -11115,6 +11115,14 @@ history:
   status: down
   timestamp: 2024-11-04T02:07:39+00:00Z
   type: dns
+- expected:
+  - 192.0.2.1
+  result:
+  - 34.224.149.186
+  - 3.18.255.247
+  status: down
+  timestamp: 2024-11-04T02:38:03+00:00Z
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
