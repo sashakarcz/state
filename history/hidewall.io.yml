@@ -18280,6 +18280,11 @@ history:
   status: up
   timestamp: 2024-11-04T03:30:24+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.142381
+  status: up
+  timestamp: 2024-11-04T03:40:50+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.161639+00:00'
 resolvedWhen: '2024-10-25T21:09:43.161643+00:00'
