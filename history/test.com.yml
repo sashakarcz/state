@@ -11280,6 +11280,11 @@ history:
   status: down
   timestamp: 2024-11-04T06:13:40+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.036399
+  status: down
+  timestamp: 2024-11-04T06:16:21+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
