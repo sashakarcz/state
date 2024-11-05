@@ -13160,6 +13160,11 @@ history:
   status: down
   timestamp: 2024-11-05T17:30:03+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.049091
+  status: down
+  timestamp: 2024-11-05T17:36:12+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
