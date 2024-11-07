@@ -15770,6 +15770,11 @@ history:
   status: down
   timestamp: 2024-11-07T18:51:58+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.114248
+  status: down
+  timestamp: 2024-11-07T19:01:53+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
