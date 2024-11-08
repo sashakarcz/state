@@ -27063,8 +27063,13 @@ history:
   status: down
   timestamp: 2024-11-08T11:26:08+00:00Z
   type: dns
-resolved: false
-resolvedStartTime: null
-resolvedWhen: null
-status: down
+- actualStatus: 403
+  responseTime: 0.139301
+  status: up
+  timestamp: 2024-11-08T11:28:04+00:00Z
+  type: http
+resolved: true
+resolvedStartTime: 2024-11-08T11:28:04+00:00Z
+resolvedWhen: 2024-11-08T11:28:04+00:00Z
+status: up
 url: https://hidewall.io
