@@ -27055,8 +27055,16 @@ history:
   status: up
   timestamp: 2024-11-08T11:21:54+00:00Z
   type: http
-resolved: true
-resolvedStartTime: 2024-11-08T11:21:54+00:00Z
-resolvedWhen: 2024-11-08T11:21:54+00:00Z
-status: up
+- expected:
+  - 104.21.32.197
+  - 172.67.154.114
+  result:
+  - 172.64.80.1
+  status: down
+  timestamp: 2024-11-08T11:26:08+00:00Z
+  type: dns
+resolved: false
+resolvedStartTime: null
+resolvedWhen: null
+status: down
 url: https://hidewall.io
