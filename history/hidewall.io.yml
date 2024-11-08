@@ -27009,6 +27009,11 @@ history:
   status: up
   timestamp: 2024-11-08T10:53:37+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.147225
+  status: up
+  timestamp: 2024-11-08T10:56:41+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-08T09:51:04+00:00Z
 resolvedWhen: 2024-11-08T09:51:04+00:00Z
