@@ -30193,6 +30193,11 @@ history:
   status: up
   timestamp: 2024-11-09T22:45:08+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.191933
+  status: up
+  timestamp: 2024-11-09T22:51:06+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-08T11:28:04+00:00Z
 resolvedWhen: 2024-11-08T11:28:04+00:00Z
