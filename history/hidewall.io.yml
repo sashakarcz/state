@@ -31140,6 +31140,11 @@ history:
   status: up
   timestamp: 2024-11-10T11:00:03+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.199025
+  status: up
+  timestamp: 2024-11-10T11:04:18+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-08T11:28:04+00:00Z
 resolvedWhen: 2024-11-08T11:28:04+00:00Z
