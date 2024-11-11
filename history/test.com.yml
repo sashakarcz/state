@@ -20843,6 +20843,11 @@ history:
   status: down
   timestamp: 2024-11-11T22:19:58+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.042135
+  status: down
+  timestamp: 2024-11-11T22:24:09+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
