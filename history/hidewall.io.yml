@@ -33812,6 +33812,11 @@ history:
   status: up
   timestamp: 2024-11-11T18:12:26+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.262236
+  status: up
+  timestamp: 2024-11-11T18:16:24+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-08T11:28:04+00:00Z
 resolvedWhen: 2024-11-08T11:28:04+00:00Z
