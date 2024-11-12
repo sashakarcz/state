@@ -36160,6 +36160,11 @@ history:
   status: up
   timestamp: 2024-11-12T21:59:47+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.148391
+  status: up
+  timestamp: 2024-11-12T22:07:13+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-08T11:28:04+00:00Z
 resolvedWhen: 2024-11-08T11:28:04+00:00Z
