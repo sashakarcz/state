@@ -36020,6 +36020,11 @@ history:
   status: up
   timestamp: 2024-11-12T20:37:47+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.214857
+  status: up
+  timestamp: 2024-11-12T20:40:47+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-08T11:28:04+00:00Z
 resolvedWhen: 2024-11-08T11:28:04+00:00Z
