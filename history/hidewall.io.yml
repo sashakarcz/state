@@ -38177,6 +38177,11 @@ history:
   status: up
   timestamp: 2024-11-13T22:20:04+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.19864
+  status: up
+  timestamp: 2024-11-13T22:22:57+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-08T11:28:04+00:00Z
 resolvedWhen: 2024-11-08T11:28:04+00:00Z
