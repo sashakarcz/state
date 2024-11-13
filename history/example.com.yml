@@ -32378,6 +32378,11 @@ history:
   status: up
   timestamp: 2024-11-13T16:58:26+00:00Z
   type: dns
+- actualStatus: 200
+  responseTime: 0.046719
+  status: up
+  timestamp: 2024-11-13T17:05:05+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
 resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
