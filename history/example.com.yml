@@ -34430,6 +34430,11 @@ history:
   status: up
   timestamp: 2024-11-14T22:07:09+00:00Z
   type: dns
+- actualStatus: 200
+  responseTime: 0.005389
+  status: up
+  timestamp: 2024-11-14T22:13:32+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
 resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
