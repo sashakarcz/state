@@ -24250,6 +24250,11 @@ history:
   status: down
   timestamp: 2024-11-14T15:08:54+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.104078
+  status: down
+  timestamp: 2024-11-14T15:11:23+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
