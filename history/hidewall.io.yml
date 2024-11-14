@@ -40133,6 +40133,11 @@ history:
   status: up
   timestamp: 2024-11-14T22:53:00+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.212626
+  status: up
+  timestamp: 2024-11-14T22:55:57+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-08T11:28:04+00:00Z
 resolvedWhen: 2024-11-08T11:28:04+00:00Z
