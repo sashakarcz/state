@@ -24438,6 +24438,11 @@ history:
   status: down
   timestamp: 2024-11-14T17:40:53+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.118571
+  status: down
+  timestamp: 2024-11-14T17:43:10+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
