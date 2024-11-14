@@ -24063,6 +24063,11 @@ history:
   status: down
   timestamp: 2024-11-14T11:37:30+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.126987
+  status: down
+  timestamp: 2024-11-14T11:39:52+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
