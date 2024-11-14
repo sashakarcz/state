@@ -24378,6 +24378,11 @@ history:
   status: down
   timestamp: 2024-11-14T16:54:26+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.040985
+  status: down
+  timestamp: 2024-11-14T16:57:46+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
