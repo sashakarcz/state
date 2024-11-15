@@ -25888,6 +25888,11 @@ history:
   status: down
   timestamp: 2024-11-15T21:11:50+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.041723
+  status: down
+  timestamp: 2024-11-15T21:18:27+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
