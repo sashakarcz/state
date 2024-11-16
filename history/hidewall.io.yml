@@ -42150,6 +42150,11 @@ history:
   status: up
   timestamp: 2024-11-16T02:37:42+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.216602
+  status: up
+  timestamp: 2024-11-16T02:58:13+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-08T11:28:04+00:00Z
 resolvedWhen: 2024-11-08T11:28:04+00:00Z
