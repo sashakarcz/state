@@ -43228,6 +43228,11 @@ history:
   status: up
   timestamp: 2024-11-16T15:30:00+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.202858
+  status: up
+  timestamp: 2024-11-16T15:30:36+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-08T11:28:04+00:00Z
 resolvedWhen: 2024-11-08T11:28:04+00:00Z
