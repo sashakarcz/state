@@ -26436,6 +26436,11 @@ history:
   status: down
   timestamp: 2024-11-16T08:09:46+00:00Z
   type: http
+- actualStatus: 403
+  responseTime: 0.110809
+  status: down
+  timestamp: 2024-11-16T08:40:26+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
