@@ -27210,6 +27210,11 @@ history:
   status: down
   timestamp: 2024-11-16T21:16:47+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.02575
+  status: down
+  timestamp: 2024-11-16T21:22:00+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
