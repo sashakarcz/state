@@ -27028,6 +27028,11 @@ history:
   status: down
   timestamp: 2024-11-16T18:36:00+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.040519
+  status: down
+  timestamp: 2024-11-16T18:44:17+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
