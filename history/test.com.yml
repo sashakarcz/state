@@ -28388,6 +28388,11 @@ history:
   status: down
   timestamp: 2024-11-17T18:59:09+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.031475
+  status: down
+  timestamp: 2024-11-17T19:06:21+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
