@@ -27633,6 +27633,14 @@ history:
   status: down
   timestamp: 2024-11-17T06:36:03+00:00Z
   type: dns
+- expected:
+  - 192.0.2.1
+  result:
+  - 3.18.255.247
+  - 34.224.149.186
+  status: down
+  timestamp: 2024-11-17T06:46:37+00:00Z
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
