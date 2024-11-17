@@ -28469,6 +28469,14 @@ history:
   status: down
   timestamp: 2024-11-17T19:55:27+00:00Z
   type: http
+- expected:
+  - 192.0.2.1
+  result:
+  - 34.224.149.186
+  - 3.18.255.247
+  status: down
+  timestamp: 2024-11-17T20:00:25+00:00Z
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
