@@ -28121,6 +28121,11 @@ history:
   status: down
   timestamp: 2024-11-17T14:27:13+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.023372
+  status: down
+  timestamp: 2024-11-17T14:30:20+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
