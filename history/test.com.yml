@@ -28200,6 +28200,11 @@ history:
   status: down
   timestamp: 2024-11-17T15:39:44+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.043985
+  status: down
+  timestamp: 2024-11-17T15:46:07+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
