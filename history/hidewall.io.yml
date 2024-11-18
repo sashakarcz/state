@@ -46542,6 +46542,11 @@ history:
   status: up
   timestamp: 2024-11-18T08:47:11+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.189795
+  status: up
+  timestamp: 2024-11-18T08:52:46+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-08T11:28:04+00:00Z
 resolvedWhen: 2024-11-08T11:28:04+00:00Z
