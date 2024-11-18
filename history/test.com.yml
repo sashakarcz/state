@@ -29390,6 +29390,11 @@ history:
   status: down
   timestamp: 2024-11-18T15:08:21+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.02927
+  status: down
+  timestamp: 2024-11-18T15:17:27+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
