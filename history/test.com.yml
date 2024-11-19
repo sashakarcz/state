@@ -30383,6 +30383,11 @@ history:
   status: down
   timestamp: 2024-11-19T10:43:33+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.033628
+  status: down
+  timestamp: 2024-11-19T10:47:24+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
