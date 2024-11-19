@@ -48003,6 +48003,11 @@ history:
   status: up
   timestamp: 2024-11-19T03:55:37+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.195782
+  status: up
+  timestamp: 2024-11-19T04:02:02+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-18T10:20:03+00:00Z
 resolvedWhen: 2024-11-18T10:20:03+00:00Z
