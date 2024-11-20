@@ -32060,6 +32060,11 @@ history:
   status: down
   timestamp: 2024-11-20T19:34:51+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.033156
+  status: down
+  timestamp: 2024-11-20T19:40:50+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
