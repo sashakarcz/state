@@ -32733,6 +32733,11 @@ history:
   status: down
   timestamp: 2024-11-21T09:20:58+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.049484
+  status: down
+  timestamp: 2024-11-21T09:29:44+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
