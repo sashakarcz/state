@@ -32778,6 +32778,11 @@ history:
   status: down
   timestamp: 2024-11-21T09:59:05+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.052806
+  status: down
+  timestamp: 2024-11-21T10:06:04+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
