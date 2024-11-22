@@ -34078,6 +34078,11 @@ history:
   status: down
   timestamp: 2024-11-22T13:15:07+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.183886
+  status: down
+  timestamp: 2024-11-22T13:27:34+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
