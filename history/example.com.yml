@@ -48143,6 +48143,11 @@ history:
   status: up
   timestamp: 2024-11-23T11:45:35+00:00Z
   type: dns
+- actualStatus: 200
+  responseTime: 0.015211
+  status: up
+  timestamp: 2024-11-23T11:47:41+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
 resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
