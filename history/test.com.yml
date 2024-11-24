@@ -36108,6 +36108,11 @@ history:
   status: down
   timestamp: 2024-11-24T07:37:20+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.047014
+  status: down
+  timestamp: 2024-11-24T07:41:33+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
