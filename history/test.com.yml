@@ -36518,6 +36518,11 @@ history:
   status: down
   timestamp: 2024-11-24T15:20:24+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.074318
+  status: down
+  timestamp: 2024-11-24T15:29:06+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
