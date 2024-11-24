@@ -36760,6 +36760,11 @@ history:
   status: down
   timestamp: 2024-11-24T19:24:06+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.0301
+  status: down
+  timestamp: 2024-11-24T19:25:44+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
