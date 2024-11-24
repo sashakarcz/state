@@ -36919,6 +36919,11 @@ history:
   status: down
   timestamp: 2024-11-24T21:52:20+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.024888
+  status: down
+  timestamp: 2024-11-24T21:58:50+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
