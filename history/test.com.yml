@@ -37408,6 +37408,11 @@ history:
   status: down
   timestamp: 2024-11-25T09:25:04+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.164329
+  status: down
+  timestamp: 2024-11-25T09:29:05+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
