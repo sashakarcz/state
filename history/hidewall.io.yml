@@ -59757,6 +59757,11 @@ history:
   status: up
   timestamp: 2024-11-25T13:55:07+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.198141
+  status: up
+  timestamp: 2024-11-25T14:00:02+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-18T10:20:03+00:00Z
 resolvedWhen: 2024-11-18T10:20:03+00:00Z
