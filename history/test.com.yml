@@ -38798,6 +38798,11 @@ history:
   status: down
   timestamp: 2024-11-26T14:59:10+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.042744
+  status: down
+  timestamp: 2024-11-26T15:03:44+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
