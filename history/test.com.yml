@@ -38440,6 +38440,11 @@ history:
   status: down
   timestamp: 2024-11-26T07:12:15+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.08754
+  status: down
+  timestamp: 2024-11-26T07:40:12+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
