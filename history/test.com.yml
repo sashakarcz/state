@@ -38278,6 +38278,11 @@ history:
   status: down
   timestamp: 2024-11-26T04:05:05+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.034062
+  status: down
+  timestamp: 2024-11-26T04:10:42+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
