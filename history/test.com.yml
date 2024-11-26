@@ -38220,6 +38220,11 @@ history:
   status: down
   timestamp: 2024-11-26T01:35:15+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.043835
+  status: down
+  timestamp: 2024-11-26T02:10:50+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
