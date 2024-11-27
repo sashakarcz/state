@@ -40026,6 +40026,11 @@ history:
   status: down
   timestamp: 2024-11-27T18:03:26+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.094191
+  status: down
+  timestamp: 2024-11-27T18:10:12+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
