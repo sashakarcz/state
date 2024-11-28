@@ -40560,6 +40560,11 @@ history:
   status: down
   timestamp: 2024-11-28T05:47:31+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.044383
+  status: down
+  timestamp: 2024-11-28T05:50:06+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
