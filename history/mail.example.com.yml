@@ -33060,6 +33060,13 @@ history:
   status: down
   timestamp: 2024-11-29T17:01:55+00:00Z
   type: dns
+- expected:
+  - mail.example.net
+  result:
+  - No record found
+  status: down
+  timestamp: 2024-11-29T17:12:04+00:00Z
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
