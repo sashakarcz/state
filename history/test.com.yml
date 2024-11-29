@@ -42090,6 +42090,11 @@ history:
   status: down
   timestamp: 2024-11-29T12:26:53+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.040775
+  status: down
+  timestamp: 2024-11-29T13:15:32+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
