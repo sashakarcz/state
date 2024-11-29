@@ -42388,6 +42388,11 @@ history:
   status: down
   timestamp: 2024-11-29T18:12:51+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.045998
+  status: down
+  timestamp: 2024-11-29T18:24:14+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
