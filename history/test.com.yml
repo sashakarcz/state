@@ -42240,6 +42240,11 @@ history:
   status: down
   timestamp: 2024-11-29T15:39:35+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.033385
+  status: down
+  timestamp: 2024-11-29T15:44:45+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
