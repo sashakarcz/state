@@ -44213,6 +44213,11 @@ history:
   status: down
   timestamp: 2024-12-01T07:18:06+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.037838
+  status: down
+  timestamp: 2024-12-01T07:26:28+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
