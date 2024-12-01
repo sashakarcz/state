@@ -44600,6 +44600,11 @@ history:
   status: down
   timestamp: 2024-12-01T13:52:55+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.039737
+  status: down
+  timestamp: 2024-12-01T13:54:46+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
