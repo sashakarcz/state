@@ -44890,6 +44890,11 @@ history:
   status: down
   timestamp: 2024-12-01T18:39:05+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.068954
+  status: down
+  timestamp: 2024-12-01T18:39:40+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
