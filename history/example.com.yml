@@ -62172,6 +62172,11 @@ history:
   status: up
   timestamp: 2024-12-02T16:22:41+00:00Z
   type: dns
+- actualStatus: 200
+  responseTime: 0.045536
+  status: up
+  timestamp: 2024-12-02T16:34:28+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
 resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
