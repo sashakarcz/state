@@ -46930,6 +46930,11 @@ history:
   status: down
   timestamp: 2024-12-03T13:56:01+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.039836
+  status: down
+  timestamp: 2024-12-03T13:56:55+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
