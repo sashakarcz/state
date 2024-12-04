@@ -48100,6 +48100,11 @@ history:
   status: down
   timestamp: 2024-12-04T15:21:12+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.055995
+  status: down
+  timestamp: 2024-12-04T15:38:45+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
