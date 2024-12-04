@@ -47812,6 +47812,11 @@ history:
   status: down
   timestamp: 2024-12-04T09:28:43+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.025316
+  status: down
+  timestamp: 2024-12-04T09:37:48+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
