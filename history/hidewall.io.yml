@@ -77218,6 +77218,11 @@ history:
   status: up
   timestamp: 2024-12-05T12:00:10+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.1952
+  status: up
+  timestamp: 2024-12-05T12:02:02+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-18T10:20:03+00:00Z
 resolvedWhen: 2024-11-18T10:20:03+00:00Z
