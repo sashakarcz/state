@@ -50283,6 +50283,11 @@ history:
   status: down
   timestamp: 2024-12-06T15:46:40+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.027759
+  status: down
+  timestamp: 2024-12-06T15:52:28+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
