@@ -50080,6 +50080,11 @@ history:
   status: down
   timestamp: 2024-12-06T11:12:01+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.068799
+  status: down
+  timestamp: 2024-12-06T11:21:23+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
