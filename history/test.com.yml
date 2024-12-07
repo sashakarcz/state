@@ -51280,6 +51280,11 @@ history:
   status: down
   timestamp: 2024-12-07T11:16:55+00:00Z
   type: http
+- actualStatus: 403
+  responseTime: 0.037498
+  status: down
+  timestamp: 2024-12-07T11:24:36+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
