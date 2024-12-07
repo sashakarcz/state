@@ -51543,6 +51543,11 @@ history:
   status: down
   timestamp: 2024-12-07T15:59:27+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.042114
+  status: down
+  timestamp: 2024-12-07T16:19:28+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
