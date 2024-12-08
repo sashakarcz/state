@@ -52690,6 +52690,11 @@ history:
   status: down
   timestamp: 2024-12-08T14:30:23+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.034109
+  status: down
+  timestamp: 2024-12-08T14:32:26+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
