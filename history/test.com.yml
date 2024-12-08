@@ -53163,6 +53163,11 @@ history:
   status: down
   timestamp: 2024-12-08T23:08:49+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.033481
+  status: down
+  timestamp: 2024-12-08T23:19:59+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
