@@ -52372,6 +52372,11 @@ history:
   status: down
   timestamp: 2024-12-08T08:43:31+00:00Z
   type: http
+- actualStatus: 403
+  responseTime: 0.069004
+  status: down
+  timestamp: 2024-12-08T08:50:42+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
