@@ -53010,6 +53010,11 @@ history:
   status: down
   timestamp: 2024-12-08T20:45:38+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.079231
+  status: down
+  timestamp: 2024-12-08T20:50:24+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
