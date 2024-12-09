@@ -41460,6 +41460,13 @@ history:
   status: down
   timestamp: 2024-12-09T11:30:47+00:00Z
   type: dns
+- expected:
+  - mail.example.net
+  result:
+  - No record found
+  status: down
+  timestamp: 2024-12-09T11:37:55+00:00Z
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
