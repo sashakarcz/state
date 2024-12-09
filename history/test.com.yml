@@ -53820,6 +53820,11 @@ history:
   status: down
   timestamp: 2024-12-09T14:49:36+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.049206
+  status: down
+  timestamp: 2024-12-09T14:56:35+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
