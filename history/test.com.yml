@@ -54960,6 +54960,11 @@ history:
   status: down
   timestamp: 2024-12-10T15:08:07+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.055422
+  status: down
+  timestamp: 2024-12-10T15:20:58+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
