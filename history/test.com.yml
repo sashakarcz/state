@@ -55073,6 +55073,11 @@ history:
   status: down
   timestamp: 2024-12-10T17:39:46+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.054651
+  status: down
+  timestamp: 2024-12-10T17:41:20+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
