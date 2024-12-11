@@ -56307,6 +56307,11 @@ history:
   status: down
   timestamp: 2024-12-11T19:58:22+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.066885
+  status: down
+  timestamp: 2024-12-11T20:08:49+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
