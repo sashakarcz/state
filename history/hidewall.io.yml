@@ -87121,6 +87121,11 @@ history:
   status: up
   timestamp: 2024-12-11T05:08:03+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.17117
+  status: up
+  timestamp: 2024-12-11T05:13:51+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-18T10:20:03+00:00Z
 resolvedWhen: 2024-11-18T10:20:03+00:00Z
