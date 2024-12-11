@@ -56188,6 +56188,11 @@ history:
   status: down
   timestamp: 2024-12-11T17:58:56+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.054096
+  status: down
+  timestamp: 2024-12-11T18:08:06+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
