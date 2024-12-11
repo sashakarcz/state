@@ -56433,6 +56433,11 @@ history:
   status: down
   timestamp: 2024-12-11T21:51:27+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.058834
+  status: down
+  timestamp: 2024-12-11T21:54:21+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
