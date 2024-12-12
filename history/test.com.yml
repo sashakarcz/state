@@ -57113,6 +57113,11 @@ history:
   status: down
   timestamp: 2024-12-12T13:19:30+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.085497
+  status: down
+  timestamp: 2024-12-12T13:49:52+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
