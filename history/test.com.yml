@@ -56602,6 +56602,11 @@ history:
   status: down
   timestamp: 2024-12-12T02:47:41+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.0371
+  status: down
+  timestamp: 2024-12-12T02:55:21+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
