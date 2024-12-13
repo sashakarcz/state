@@ -58758,6 +58758,11 @@ history:
   status: down
   timestamp: 2024-12-13T22:53:14+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.059074
+  status: down
+  timestamp: 2024-12-13T22:54:24+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
