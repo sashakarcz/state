@@ -59713,6 +59713,11 @@ history:
   status: down
   timestamp: 2024-12-14T18:53:05+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.027775
+  status: down
+  timestamp: 2024-12-14T18:54:14+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
