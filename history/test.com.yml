@@ -59918,6 +59918,11 @@ history:
   status: down
   timestamp: 2024-12-14T21:46:46+00:00Z
   type: http
+- actualStatus: 403
+  responseTime: 0.03434
+  status: down
+  timestamp: 2024-12-14T21:53:26+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
