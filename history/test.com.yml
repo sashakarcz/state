@@ -60848,6 +60848,11 @@ history:
   status: down
   timestamp: 2024-12-15T18:02:30+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.054243
+  status: down
+  timestamp: 2024-12-15T18:09:18+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
