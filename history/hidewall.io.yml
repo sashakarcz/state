@@ -94419,6 +94419,11 @@ history:
   status: up
   timestamp: 2024-12-15T09:55:14+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.154904
+  status: up
+  timestamp: 2024-12-15T10:02:29+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-18T10:20:03+00:00Z
 resolvedWhen: 2024-11-18T10:20:03+00:00Z
