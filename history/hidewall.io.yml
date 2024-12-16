@@ -96483,6 +96483,11 @@ history:
   status: up
   timestamp: 2024-12-16T13:57:48+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.152028
+  status: up
+  timestamp: 2024-12-16T14:04:34+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-18T10:20:03+00:00Z
 resolvedWhen: 2024-11-18T10:20:03+00:00Z
