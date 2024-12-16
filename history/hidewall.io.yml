@@ -97069,6 +97069,15 @@ history:
   status: up
   timestamp: 2024-12-16T20:55:11+00:00Z
   type: http
+- expected:
+  - 104.21.32.197
+  - 172.67.154.114
+  result:
+  - 104.21.32.197
+  - 172.67.154.114
+  status: up
+  timestamp: 2024-12-16T21:00:07+00:00Z
+  type: dns
 resolved: true
 resolvedStartTime: 2024-11-18T10:20:03+00:00Z
 resolvedWhen: 2024-11-18T10:20:03+00:00Z
