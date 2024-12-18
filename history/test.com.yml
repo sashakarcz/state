@@ -64019,6 +64019,14 @@ history:
   status: down
   timestamp: 2024-12-18T11:44:43+00:00Z
   type: http
+- expected:
+  - 192.0.2.1
+  result:
+  - 3.18.255.247
+  - 34.224.149.186
+  status: down
+  timestamp: 2024-12-18T11:48:42+00:00Z
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
