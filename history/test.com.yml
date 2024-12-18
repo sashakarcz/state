@@ -63523,6 +63523,11 @@ history:
   status: down
   timestamp: 2024-12-17T23:58:13+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.040356
+  status: down
+  timestamp: 2024-12-18T00:00:12+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
