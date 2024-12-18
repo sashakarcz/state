@@ -63948,6 +63948,11 @@ history:
   status: down
   timestamp: 2024-12-18T10:24:55+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.0536
+  status: down
+  timestamp: 2024-12-18T10:27:22+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
