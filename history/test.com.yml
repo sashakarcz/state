@@ -65404,6 +65404,11 @@ history:
   status: down
   timestamp: 2024-12-19T16:12:59+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.120629
+  status: down
+  timestamp: 2024-12-19T16:18:33+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
