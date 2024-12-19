@@ -65198,6 +65198,11 @@ history:
   status: down
   timestamp: 2024-12-19T12:00:10+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.035489
+  status: down
+  timestamp: 2024-12-19T12:09:45+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
