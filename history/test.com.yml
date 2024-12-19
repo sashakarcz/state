@@ -64912,6 +64912,11 @@ history:
   status: down
   timestamp: 2024-12-19T06:47:43+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.056315
+  status: down
+  timestamp: 2024-12-19T06:53:32+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
