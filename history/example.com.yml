@@ -89724,6 +89724,11 @@ history:
   status: up
   timestamp: 2024-12-20T23:39:53+00:00Z
   type: dns
+- actualStatus: 200
+  responseTime: 0.045469
+  status: up
+  timestamp: 2024-12-20T23:41:59+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
 resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
