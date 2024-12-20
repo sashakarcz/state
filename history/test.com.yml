@@ -65998,6 +65998,11 @@ history:
   status: down
   timestamp: 2024-12-20T03:59:53+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.022817
+  status: down
+  timestamp: 2024-12-20T04:08:13+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
