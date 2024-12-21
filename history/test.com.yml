@@ -68443,6 +68443,11 @@ history:
   status: down
   timestamp: 2024-12-21T23:34:57+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.11068
+  status: down
+  timestamp: 2024-12-21T23:40:04+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
