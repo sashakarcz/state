@@ -106113,6 +106113,11 @@ history:
   status: up
   timestamp: 2024-12-21T21:26:44+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.215291
+  status: up
+  timestamp: 2024-12-21T21:33:43+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-18T10:20:03+00:00Z
 resolvedWhen: 2024-11-18T10:20:03+00:00Z
