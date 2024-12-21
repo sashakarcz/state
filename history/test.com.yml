@@ -67970,6 +67970,11 @@ history:
   status: down
   timestamp: 2024-12-21T16:13:04+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.088869
+  status: down
+  timestamp: 2024-12-21T16:23:12+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
