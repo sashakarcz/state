@@ -68028,6 +68028,11 @@ history:
   status: down
   timestamp: 2024-12-21T17:07:08+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.025683
+  status: down
+  timestamp: 2024-12-21T17:09:18+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
