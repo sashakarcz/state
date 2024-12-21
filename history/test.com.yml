@@ -67780,6 +67780,11 @@ history:
   status: down
   timestamp: 2024-12-21T13:14:08+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.026882
+  status: down
+  timestamp: 2024-12-21T13:24:00+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
