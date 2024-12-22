@@ -92342,6 +92342,11 @@ history:
   status: up
   timestamp: 2024-12-22T14:29:04+00:00Z
   type: dns
+- actualStatus: 200
+  responseTime: 0.020126
+  status: up
+  timestamp: 2024-12-22T14:30:57+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
 resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
