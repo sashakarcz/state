@@ -68808,6 +68808,11 @@ history:
   status: down
   timestamp: 2024-12-22T07:07:08+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.036607
+  status: down
+  timestamp: 2024-12-22T07:09:38+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
