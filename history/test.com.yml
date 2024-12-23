@@ -70873,6 +70873,11 @@ history:
   status: down
   timestamp: 2024-12-23T21:40:02+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.039388
+  status: down
+  timestamp: 2024-12-23T21:40:56+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
