@@ -71568,6 +71568,11 @@ history:
   status: down
   timestamp: 2024-12-24T12:12:40+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.078982
+  status: down
+  timestamp: 2024-12-24T12:25:07+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
