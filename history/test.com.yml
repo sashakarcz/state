@@ -72838,6 +72838,11 @@ history:
   status: down
   timestamp: 2024-12-25T14:58:03+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.059327
+  status: down
+  timestamp: 2024-12-25T15:01:04+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
