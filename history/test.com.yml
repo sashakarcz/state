@@ -74026,6 +74026,14 @@ history:
   status: down
   timestamp: 2024-12-26T15:55:14+00:00Z
   type: dns
+- expected:
+  - 192.0.2.1
+  result:
+  - 3.18.255.247
+  - 34.224.149.186
+  status: down
+  timestamp: 2024-12-26T16:02:47+00:00Z
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
