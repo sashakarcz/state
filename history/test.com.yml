@@ -73838,6 +73838,11 @@ history:
   status: down
   timestamp: 2024-12-26T12:26:33+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.05302
+  status: down
+  timestamp: 2024-12-26T12:36:44+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
