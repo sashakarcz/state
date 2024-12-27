@@ -75535,6 +75535,14 @@ history:
   status: down
   timestamp: 2024-12-27T22:57:44+00:00Z
   type: http
+- expected:
+  - 192.0.2.1
+  result:
+  - 3.18.255.247
+  - 34.224.149.186
+  status: down
+  timestamp: 2024-12-27T23:06:55+00:00Z
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
