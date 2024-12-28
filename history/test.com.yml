@@ -75970,6 +75970,11 @@ history:
   status: down
   timestamp: 2024-12-28T09:42:06+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.044107
+  status: down
+  timestamp: 2024-12-28T09:43:56+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
