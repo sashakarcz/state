@@ -79058,6 +79058,11 @@ history:
   status: down
   timestamp: 2024-12-31T03:58:17+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.029315
+  status: down
+  timestamp: 2024-12-31T04:03:01+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
