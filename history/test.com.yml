@@ -79973,6 +79973,11 @@ history:
   status: down
   timestamp: 2024-12-31T22:38:10+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.025822
+  status: down
+  timestamp: 2024-12-31T22:39:08+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
