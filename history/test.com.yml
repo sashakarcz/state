@@ -78960,6 +78960,11 @@ history:
   status: down
   timestamp: 2024-12-30T23:59:42+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.043622
+  status: down
+  timestamp: 2024-12-31T00:36:46+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
