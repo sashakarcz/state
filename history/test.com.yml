@@ -80036,6 +80036,11 @@ history:
   status: down
   timestamp: 2024-12-31T23:46:25+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.025788
+  status: down
+  timestamp: 2024-12-31T23:49:59+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
