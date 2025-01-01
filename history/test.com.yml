@@ -80459,6 +80459,14 @@ history:
   status: down
   timestamp: 2025-01-01T10:20:41+00:00Z
   type: dns
+- expected:
+  - 192.0.2.1
+  result:
+  - 34.224.149.186
+  - 3.18.255.247
+  status: down
+  timestamp: 2025-01-01T10:31:44+00:00Z
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
