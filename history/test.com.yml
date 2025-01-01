@@ -80216,6 +80216,11 @@ history:
   status: down
   timestamp: 2025-01-01T05:32:45+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.041208
+  status: down
+  timestamp: 2025-01-01T05:36:45+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
