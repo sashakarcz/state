@@ -80163,6 +80163,11 @@ history:
   status: down
   timestamp: 2025-01-01T04:41:06+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.122919
+  status: down
+  timestamp: 2025-01-01T04:45:58+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
