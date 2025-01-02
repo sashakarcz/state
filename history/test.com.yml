@@ -81377,6 +81377,14 @@ history:
   status: down
   timestamp: 2025-01-02T06:59:37+00:00Z
   type: dns
+- expected:
+  - 192.0.2.1
+  result:
+  - 3.18.255.247
+  - 34.224.149.186
+  status: down
+  timestamp: 2025-01-02T07:08:39+00:00Z
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
