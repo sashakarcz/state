@@ -82218,6 +82218,11 @@ history:
   status: down
   timestamp: 2025-01-02T23:07:24+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.092217
+  status: down
+  timestamp: 2025-01-02T23:11:23+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
