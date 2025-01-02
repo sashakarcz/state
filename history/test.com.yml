@@ -81467,6 +81467,11 @@ history:
   status: down
   timestamp: 2025-01-02T08:37:55+00:00Z
   type: http
+- actualStatus: 403
+  responseTime: 0.042125
+  status: down
+  timestamp: 2025-01-02T08:58:12+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
