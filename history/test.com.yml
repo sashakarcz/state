@@ -82963,6 +82963,11 @@ history:
   status: down
   timestamp: 2025-01-03T16:21:33+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.025656
+  status: down
+  timestamp: 2025-01-03T16:31:55+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
