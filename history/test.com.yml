@@ -83143,6 +83143,11 @@ history:
   status: down
   timestamp: 2025-01-03T19:44:23+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.054439
+  status: down
+  timestamp: 2025-01-03T19:47:43+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
