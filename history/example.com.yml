@@ -112386,6 +112386,13 @@ history:
   status: up
   timestamp: 2025-01-04T07:51:58+00:00Z
   type: dns
+- expected:
+  - 93.184.215.14
+  result:
+  - 93.184.215.14
+  status: up
+  timestamp: 2025-01-04T07:58:43+00:00Z
+  type: dns
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
 resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
