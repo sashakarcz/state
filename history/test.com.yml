@@ -84203,6 +84203,11 @@ history:
   status: down
   timestamp: 2025-01-04T16:43:24+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.057465
+  status: down
+  timestamp: 2025-01-04T16:51:04+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
