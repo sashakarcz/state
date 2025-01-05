@@ -132723,6 +132723,11 @@ history:
   status: up
   timestamp: 2025-01-05T11:00:00+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.141914
+  status: up
+  timestamp: 2025-01-05T11:07:06+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-18T10:20:03+00:00Z
 resolvedWhen: 2024-11-18T10:20:03+00:00Z
