@@ -86415,6 +86415,14 @@ history:
   status: down
   timestamp: 2025-01-06T17:11:57+00:00Z
   type: http
+- expected:
+  - 192.0.2.1
+  result:
+  - 3.18.255.247
+  - 34.224.149.186
+  status: down
+  timestamp: 2025-01-06T17:17:23+00:00Z
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
