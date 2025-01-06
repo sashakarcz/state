@@ -135063,6 +135063,11 @@ history:
   status: up
   timestamp: 2025-01-06T17:41:47+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.072524
+  status: up
+  timestamp: 2025-01-06T17:43:59+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: 2024-11-18T10:20:03+00:00Z
 resolvedWhen: 2024-11-18T10:20:03+00:00Z
