@@ -115551,6 +115551,11 @@ history:
   status: up
   timestamp: 2025-01-06T09:08:06+00:00Z
   type: dns
+- actualStatus: 200
+  responseTime: 0.014449
+  status: up
+  timestamp: 2025-01-06T09:14:14+00:00Z
+  type: http
 resolved: true
 resolvedStartTime: '2024-10-25T21:09:43.191474+00:00'
 resolvedWhen: '2024-10-25T21:09:43.191478+00:00'
