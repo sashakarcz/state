@@ -86640,6 +86640,11 @@ history:
   status: down
   timestamp: 2025-01-06T21:02:19+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.037616
+  status: down
+  timestamp: 2025-01-06T21:06:11+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
