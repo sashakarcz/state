@@ -87418,6 +87418,11 @@ history:
   status: down
   timestamp: 2025-01-07T17:32:48+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.037712
+  status: down
+  timestamp: 2025-01-07T17:36:51+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
