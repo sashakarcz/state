@@ -87098,6 +87098,11 @@ history:
   status: down
   timestamp: 2025-01-07T08:38:18+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.042396
+  status: down
+  timestamp: 2025-01-07T08:41:09+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
