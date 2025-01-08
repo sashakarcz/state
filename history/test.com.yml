@@ -87818,6 +87818,14 @@ history:
   status: down
   timestamp: 2025-01-08T02:56:34+00:00Z
   type: dns
+- expected:
+  - 192.0.2.1
+  result:
+  - 3.18.255.247
+  - 34.224.149.186
+  status: down
+  timestamp: 2025-01-08T03:08:14+00:00Z
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
