@@ -88563,6 +88563,11 @@ history:
   status: down
   timestamp: 2025-01-08T18:27:03+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.034716
+  status: down
+  timestamp: 2025-01-08T18:28:57+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
