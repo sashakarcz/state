@@ -88038,6 +88038,11 @@ history:
   status: down
   timestamp: 2025-01-08T07:20:30+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.043053
+  status: down
+  timestamp: 2025-01-08T07:24:58+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
