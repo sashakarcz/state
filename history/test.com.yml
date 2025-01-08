@@ -88260,6 +88260,14 @@ history:
   status: down
   timestamp: 2025-01-08T12:01:07+00:00Z
   type: dns
+- expected:
+  - 192.0.2.1
+  result:
+  - 34.224.149.186
+  - 3.18.255.247
+  status: down
+  timestamp: 2025-01-08T12:13:58+00:00Z
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
