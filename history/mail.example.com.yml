@@ -68585,6 +68585,13 @@ history:
   status: down
   timestamp: 2025-01-09T17:51:22+00:00Z
   type: dns
+- expected:
+  - mail.example.net
+  result:
+  - No record found
+  status: down
+  timestamp: 2025-01-09T18:09:46+00:00Z
+  type: dns
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
