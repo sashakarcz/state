@@ -90273,6 +90273,11 @@ history:
   status: down
   timestamp: 2025-01-10T12:16:37+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.039091
+  status: down
+  timestamp: 2025-01-10T12:19:01+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
