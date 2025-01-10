@@ -90066,6 +90066,11 @@ history:
   status: down
   timestamp: 2025-01-10T07:37:34+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.022864
+  status: down
+  timestamp: 2025-01-10T07:52:43+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
