@@ -91054,6 +91054,11 @@ history:
   status: down
   timestamp: 2025-01-11T05:44:39+00:00Z
   type: dns
+- actualStatus: 403
+  responseTime: 0.033457
+  status: down
+  timestamp: 2025-01-11T06:07:07+00:00Z
+  type: http
 resolved: false
 resolvedStartTime: null
 resolvedWhen: null
